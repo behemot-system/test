@@ -151,10 +151,10 @@
     <span></span><span></span><span></span>
   </button>
   <nav class="site-nav" id="siteNav" role="navigation" aria-label="Główna nawigacja">
-    <a href="#funkcje">Funkcje</a>
-    <a href="#dla-kogo">Dla Kogo</a>
+    <a href="/">Strona Główna</a>
+    <a href="/#funkcje">Funkcje</a>
     <a href="/o-nas.html">O Nas</a>
-    <a href="/cennik.html" class="nav-cta">Cennik</a>
+    <a href="/cennik.html">Cennik</a>
     <a href="/kontakt.html">Kontakt</a>
   </nav>
 </header>
@@ -335,6 +335,14 @@
 </footer>
 
 <script>
+  const path = window.location.pathname;
+  document.querySelectorAll('.site-nav a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === path || (path === '/' && href === '/')) {
+      a.classList.add('active');
+    }
+  });
+
   const toggle = document.getElementById('navToggle');
   const nav = document.getElementById('siteNav');
   toggle.addEventListener('click', () => {
@@ -354,6 +362,7 @@
 </script>
 </body>
 </html>
+
 
 
 
