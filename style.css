@@ -164,24 +164,37 @@ strong { color:var(--white); }
  text-underline-offset: 3px;
 }
 
+.tech-list {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ display: flex;
+ flex-direction: column;
+ gap: 0;
+}
+
 .tech-list li {
  font-size: 15px;
  color: var(--text);
  display: flex;
  flex-direction: column;
- gap: 2px;
- padding: 8px 0;
+ gap: 4px;
+ padding: 12px 0;
+ border-bottom: 1px solid rgba(0, 242, 255, 0.1);
+ text-align: left !important;
 }
 
 .tech-list li strong {
  color: var(--cyan);
- font-size: 14px;
+ font-size: 13px;
  text-transform: uppercase;
  letter-spacing: 0.5px;
+ text-align: left !important;
 }
 
 .tech-list li span {
  font-size: 14px;
  color: var(--text);
  line-height: 1.5;
+ text-align: left !important;
 }
