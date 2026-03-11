@@ -49,6 +49,7 @@
   .features-list ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .features-list li { font-size: 15px; color: var(--text); display: grid; grid-template-columns: auto 1fr; gap: 0 12px; align-items: start; }
   .features-list li::before { content: '✓'; color: var(--cyan); font-weight: bold; flex-shrink: 0; margin-top: 1px; }
+  .features-list li strong::after { content: ' —';}
   .extension-card { background: var(--dark2); border: 1px solid var(--border); border-left: 3px solid var(--cyan); padding: 28px 32px; margin-bottom: 24px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 20px; }
   .extension-card h3 { font-family: var(--font-head); font-size: 20px; color: var(--white); margin-bottom: 8px; }
   .extension-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
