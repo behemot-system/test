@@ -222,7 +222,7 @@
     document.body.style.overflow = open ? 'hidden' : '';
   });
   nav.querySelectorAll('a').forEach(a => {
-    a.addEventListenner('click', () => {
+    a.addEventListener('click', () => {
       nav.classList.remove('open');
       toggle.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
