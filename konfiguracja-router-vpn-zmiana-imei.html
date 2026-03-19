@@ -67,7 +67,7 @@
     margin: 8mm auto;
     position: relative;
     overflow: hidden;
-    display: flex;
+    display: block;
     flex-direction: column;
   }
 
@@ -101,7 +101,7 @@
     border-bottom: 2px solid var(--accent);
     background: linear-gradient(180deg, var(--bg3) 0%, var(--bg) 100%);
   }
-  .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2mm; }
+  .header-top { display: block; align-items: center; justify-content: space-between; margin-bottom: 2mm; }
   .brand-name {
     font-family: 'Rajdhani', sans-serif;
     font-size: 40pt; font-weight: 700;
@@ -146,15 +146,15 @@
     color: var(--accent); letter-spacing: 2.5px; text-transform: uppercase;
     padding-bottom: 1.5mm; border-bottom: 1.5px solid var(--accent);
     margin-bottom: 2.5mm;
-    display: flex; align-items: center; gap: 7px;
+    display: block; align-items: center; gap: 7px;
   }
   .section-title::before { content: '//'; font-family: 'Share Tech Mono', monospace; font-size: 8.5pt; opacity: 0.5; }
 
   /* STEPS */
-  .steps { display: flex; flex-direction: column; gap: 1.5mm; }
+  .steps { display: block; flex-direction: column; gap: 1.5mm; }
 
   .step {
-    display: flex; align-items: flex-start; gap: 3mm;
+    display: block; align-items: flex-start; gap: 3mm;
     padding: 2.5mm 4mm;
     background: var(--bg2);
     border-left: 2px solid var(--border-dark);
@@ -176,14 +176,14 @@
 
   /* SUB-LIST inside step */
   .sub-list { margin-top: 1mm; padding-left: 3mm; list-style: none; }
-  .sub-list li { font-size: 8.5pt; line-height: 1.45; color: var(--text); display: flex; gap: 2mm; }
+  .sub-list li { font-size: 8.5pt; line-height: 1.45; color: var(--text); display: block; gap: 2mm; }
   .sub-list li::before { content: '›'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
 
   /* WARN BOX */
   .warn-box {
     margin-top: 2.5mm; padding: 2.5mm 4mm;
     border: 1.5px solid #cc6600; background: #fff8f0;
-    display: flex; gap: 3mm; align-items: flex-start;
+    display: block; gap: 3mm; align-items: flex-start;
   }
   .warn-icon { font-size: 12pt; flex-shrink: 0; line-height: 1.3; }
   .warn-text { font-size: 8.5pt; line-height: 1.5; color: #7a3a00; }
@@ -204,7 +204,7 @@
   /* CONTACT */
   .contact-box {
     padding: 3.5mm 5mm; border: 1.5px solid var(--accent); background: var(--bg2);
-    display: flex; align-items: center; justify-content: space-between; gap: 5mm;
+    display: block; align-items: center; justify-content: space-between; gap: 5mm;
   }
   .contact-invite { font-family: 'Rajdhani', sans-serif; font-size: 12pt; font-weight: 700; color: var(--dark); margin-bottom: 1mm; letter-spacing: 0.5px; }
   .contact-desc { font-size: 8pt; line-height: 1.4; color: var(--muted); }
@@ -220,7 +220,7 @@
   }
   .footer {
     padding: 3mm 15mm; background: var(--dark);
-    display: flex; align-items: center; justify-content: space-between;
+    display: block; align-items: center; justify-content: space-between;
     border-top: 2px solid var(--accent); position: relative; z-index: 1;
   }
   .footer-brand { font-family: 'Rajdhani', sans-serif; font-size: 11pt; font-weight: 700; color: #ffffff; letter-spacing: 2px; }
@@ -233,7 +233,7 @@
   .p2-header {
     padding: 4mm 15mm; border-bottom: 2px solid var(--accent);
     background: linear-gradient(180deg, var(--bg3) 0%, var(--bg) 100%);
-    display: flex; align-items: center; justify-content: space-between;
+    display: block; align-items: center; justify-content: space-between;
     position: relative; z-index: 1;
   }
   .p2-brand { font-family: 'Rajdhani', sans-serif; font-size: 18pt; font-weight: 700; color: var(--dark); letter-spacing: 3px; }
@@ -244,6 +244,27 @@
   .mt3 { margin-top: 3mm; }
   .mt4 { margin-top: 4mm; }
   .footer-push { margin-top: auto; position: relative; z-index: 1; }
+
+@media screen and (max-width: 720px) {
+  body { background: #fff; }
+  .page {
+    width: 100%;
+    min-height: unset;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+
+@media screen and (max-width: 720px) {
+  body { background: #fff; }
+  .page {
+    width: 100%;
+    min-height: unset;
+    margin: 0;
+    border-radius: 0;
+  }
+}
 </style>
 </head>
 <body>
