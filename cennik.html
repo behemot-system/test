@@ -16,11 +16,44 @@
   "description": "Kompletny pakiet: router GL-E750V2 + hardened firmware + VPN WireGuard 12 miesięcy",
   "brand": { "@type": "Brand", "name": "Mudi Ghost" },
   "offers": {
-   "@type": "Offer",
-   "price": "350",
-   "priceCurrency": "EUR",
-   "availability": "https://schema.org/InStock"
-  }
+      "@type": "Offer",
+      "price": "350",
+      "priceCurrency": "EUR",
+      "priceValidUntil": "2026-12-31",
+      "availability": "https://schema.org/InStock",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "EUR"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": ["PL", "DE", "FR", "NL", "BE", "AT", "CZ", "SK", "HU", "SE", "DK", "FI", "IT", "ES", "PT"]
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "businessDays": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+          },
+          "cutoffTime": "12:00:00",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 3,
+            "maxValue": 5,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "PL",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+      }
+    },
+    "image": "https://mudighost.com/mudi-ghost-router-imei-change.jpg"
  }
  </script>
  <meta property="og:title" content="Cennik — Mudi Ghost | Router VPN ze Zmiennym IMEI — 350 EUR">

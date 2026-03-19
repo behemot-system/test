@@ -30,9 +30,41 @@
       "@type": "Offer",
       "price": "350",
       "priceCurrency": "EUR",
+      "priceValidUntil": "2026-12-31",
       "availability": "https://schema.org/InStock",
-      "url": "https://mudighost.com/cennik.html"
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "EUR"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": ["PL", "DE", "FR", "NL", "BE", "AT", "CZ", "SK", "HU", "SE", "DK", "FI", "IT", "ES", "PT"]
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "businessDays": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+          },
+          "cutoffTime": "12:00:00",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 3,
+            "maxValue": 5,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "PL",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+      }
     },
+    "image": "https://mudighost.com/mudi-ghost-router-imei-change.jpg",
     "keywords": "router VPN ze zmiennym IMEI, anonimowy router, zmiana IMEI, WireGuard, anonimowość w sieci"
   }
   </script>
