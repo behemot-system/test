@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>IMEI spoofing — czy to działa? Prawda o fałszywej ochronie | Mudi Ghost</title>
+
+  <meta name="description" content="Dowiedz się czym różni się IMEI spoofing od rzeczywistej zmiany IMEI. Dlaczego aplikacje do zmiany IMEI nie dają prawdziwej ochrony i jak Mudi Ghost rozwiązuje ten problem sprzętowo.">
+
+  <meta name="keywords" content="IMEI spoofing, zmiana IMEI, fałszywa ochrona prywatności, śledzenie telefonu, Mudi Ghost router">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Mudi Ghost">
+  <link rel="canonical" href="https://mudighost.com/blog/imei-spoofing-czy-to-dziala">
+
+  <meta property="og:title" content="IMEI spoofing — czy to działa? Prawda o fałszywej ochronie | Mudi Ghost">
+  <meta property="og:description" content="Dowiedz się czym różni się IMEI spoofing od rzeczywistej zmiany IMEI. Dlaczego aplikacje do zmiany IMEI nie dają prawdziwej ochrony.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mudighost.com/blog/imei-spoofing-czy-to-dziala">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="Mudi Ghost">
+  <meta property="article:published_time" content="2026-03-25T00:00:00+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="IMEI spoofing — czy to działa? Prawda o fałszywej ochronie | Mudi Ghost">
+  <meta name="twitter:description" content="Dowiedz się czym różni się IMEI spoofing od rzeczywistej zmiany IMEI. Dlaczego aplikacje do zmiany IMEI nie dają prawdziwej ochrony.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "IMEI spoofing — czy to działa? Prawda o fałszywej ochronie",
+    "description": "Dowiedz się czym różni się IMEI spoofing od rzeczywistej zmiany IMEI. Dlaczego aplikacje do zmiany IMEI nie dają prawdziwej ochrony i jak Mudi Ghost rozwiązuje ten problem sprzętowo.",
+    "url": "https://mudighost.com/blog/imei-spoofing-czy-to-dziala",
+    "datePublished": "2026-03-25",
+    "dateModified": "2026-03-25",
+    "author": {
+      "@type": "Organization",
+      "name": "Mudi Ghost",
+      "url": "https://mudighost.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mudi Ghost",
+      "url": "https://mudighost.com"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mudighost.com/blog/imei-spoofing-czy-to-dziala"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Strona Główna", "item": "https://mudighost.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mudighost.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "IMEI spoofing — czy to działa?", "item": "https://mudighost.com/blog/imei-spoofing-czy-to-dziala" }
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    .breadcrumb { max-width: var(--content-w); margin: 0 auto; padding: 16px 40px 0; font-family: var(--font-mono); font-size: 12px; color: var(--muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; position: relative; z-index: 1; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--cyan); }
+    .breadcrumb span { color: var(--border); }
+    .post-wrap { max-width: var(--content-w); margin: 0 auto; padding: 48px 40px 80px; position: relative; z-index: 1; }
+    .post-wrap h1 { font-family: var(--font-head); font-size: 40px; font-weight: 700; color: var(--white); letter-spacing: 2px; line-height: 1.1; margin-bottom: 20px; text-transform: uppercase; }
+    .post-wrap h1 .accent { color: var(--cyan); }
+    .post-meta { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--border); font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+    .post-meta span::before { content: '// '; color: var(--cyan); }
+    .post-intro { font-size: 17px; line-height: 1.8; color: var(--text); margin-bottom: 36px; padding: 22px 26px; background: var(--dark2); border-left: 4px solid var(--cyan); }
+    .post-toc { background: var(--dark2); border: 1px solid var(--border); border-left: 3px solid var(--cyan); padding: 20px 24px; margin-bottom: 40px; }
+    .post-toc h4 { font-family: var(--font-mono); font-size: 11px; color: var(--cyan); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+    .post-toc h4::before { content: '// '; }
+    .post-toc ol { list-style: none; display: flex; flex-direction: column; gap: 6px; counter-reset: toc-counter; padding: 0; margin: 0; }
+    .post-toc ol li { counter-increment: toc-counter; }
+    .post-toc ol li a { font-size: 14px; color: var(--muted); text-decoration: none; display: flex; gap: 10px; align-items: flex-start; line-height: 1.4; transition: color 0.2s; }
+    .post-toc ol li a::before { content: counter(toc-counter, decimal-leading-zero); color: var(--cyan); font-family: var(--font-mono); font-size: 11px; flex-shrink: 0; padding-top: 1px; }
+    .post-toc ol li a:hover { color: var(--cyan); }
+    .post-body h2 { font-family: var(--font-head); font-size: 24px; font-weight: 700; color: var(--white); letter-spacing: 1px; text-transform: uppercase; margin: 44px 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+    .post-body h2 .accent { color: var(--cyan); }
+    .post-body h3 { font-family: var(--font-head); font-size: 18px; font-weight: 700; color: var(--cyan); margin: 24px 0 10px; }
+    .post-body p { font-size: 16px; line-height: 1.85; margin-bottom: 18px; color: var(--text); }
+    .post-body strong { color: var(--white); }
+    .post-body a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
+    .post-body a:hover { opacity: 0.75; }
+    .post-body ul, .post-body ol { list-style: none; padding: 0; margin: 0 0 18px 0; display: flex; flex-direction: column; gap: 8px; }
+    .post-body ul li, .post-body ol li { font-size: 16px; line-height: 1.65; color: var(--text); display: flex; align-items: flex-start; gap: 10px; }
+    .post-body ul li::before { content: '›'; color: var(--cyan); font-family: var(--font-mono); font-size: 18px; flex-shrink: 0; margin-top: -1px; }
+    .post-body ol { counter-reset: ol-counter; }
+    .post-body ol li::before { content: counter(ol-counter, decimal-leading-zero); counter-increment: ol-counter; color: var(--cyan); font-family: var(--font-mono); font-size: 12px; flex-shrink: 0; padding-top: 3px; }
+    .post-highlight { background: var(--dark3); border: 1px solid var(--cyan); padding: 18px 22px; margin: 24px 0; box-shadow: inset 0 0 20px rgba(0,242,255,0.03); }
+    .post-highlight p { margin-bottom: 0; }
+    .post-warn { background: rgba(255,160,0,0.04); border-left: 3px solid #ffa000; padding: 14px 18px; margin: 24px 0; font-size: 15px; line-height: 1.65; color: var(--text); }
+    .post-cta { background: var(--dark2); border: 2px solid var(--cyan); padding: 28px 32px; margin: 48px 0 36px; text-align: center; position: relative; overflow: hidden; }
+    .post-cta::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--cyan); box-shadow: 0 0 16px var(--cyan-glow); }
+    .post-cta h3 { font-family: var(--font-head); font-size: 22px; color: var(--white); margin-bottom: 10px; }
+    .post-cta p { font-size: 15px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
+    .post-tags { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .tag { font-family: var(--font-mono); font-size: 11px; padding: 4px 12px; border: 1px solid var(--border); color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+    .related-section { background: var(--dark2); padding: 50px 0; position: relative; z-index: 1; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
+    .related-card { background: var(--dark3); border: 1px solid var(--border); border-top: 2px solid var(--cyan); padding: 20px; text-decoration: none; display: block; transition: transform 0.2s, box-shadow 0.2s; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,242,255,0.07); }
+    .related-card .rc-date { font-family: var(--font-mono); font-size: 10px; color: var(--muted); margin-bottom: 8px; }
+    .related-card .rc-date::before { content: '// '; color: var(--cyan); }
+    .related-card h4 { font-family: var(--font-head); font-size: 16px; color: var(--white); line-height: 1.3; }
+    @media (max-width: 768px) { .post-wrap { padding: 32px 24px 60px; } .post-wrap h1 { font-size: 26px; letter-spacing: 1px; } .breadcrumb { padding: 16px 24px 0; } .post-intro { font-size: 16px; padding: 16px 18px; } .post-body h2 { font-size: 20px; } .related-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="/" class="logo">MUDI <span class="accent">GHOST</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="site-nav" id="siteNav" role="navigation" aria-label="Główna nawigacja">
+    <a href="/">Strona Główna</a>
+    <a href="/#funkcje">Funkcje</a>
+    <a href="/o-nas.html">O Nas</a>
+    <a href="/cennik.html">Cennik</a>
+    <a href="/blog/">Blog</a>
+    <a href="/kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/">Strona Główna</a>
+  <span>›</span>
+  <a href="/blog/">Blog</a>
+  <span>›</span>
+  <span style="color:var(--text)">IMEI spoofing — czy to działa?</span>
+</nav>
+
+<div class="post-wrap">
+  <article itemscope itemtype="https://schema.org/Article">
+
+    <p class="section-label">Blog — Prywatność w Sieci</p>
+
+    <h1>IMEI spoofing — <span class="accent">czy to działa?</span> Prawda o fałszywej ochronie</h1>
+
+    <div class="post-meta">
+      <span>25 marca 2026</span>
+      <span>Czas czytania: 7 min</span>
+    </div>
+
+    <div class="post-intro">
+      W sieci znajdziesz dziesiątki aplikacji obiecujących "zmianę IMEI" jednym kliknięciem. Czy te narzędzia rzeczywiście chronią Twoją prywatność? W tym artykule wyjaśniam, czym różni się <strong>IMEI spoofing</strong> od rzeczywistej zmiany IMEI i dlaczego tylko sprzętowe rozwiązanie może zapewnić realną ochronę przed śledzeniem przez operatorów i służby.
+    </div>
+
+    <nav class="post-toc" aria-label="Spis treści">
+      <h4>Spis Treści</h4>
+      <ol>
+        <li><a href="#jak-dziala-imei">Jak działa IMEI i dlaczego jest kluczowy dla prywatności</a></li>
+        <li><a href="#co-to-imei-spoofing">Czym jest IMEI spoofing — jak działają "aplikacje do zmiany IMEI"</a></li>
+        <li><a href="#dlaczego-spoofing-nie-dziala">Dlaczego spoofing nie działa — wykrywanie przez operatorów</a></li>
+        <li><a href="#rzeczywista-zmiana-imei">Rzeczywista zmiana IMEI — Mudi Ghost jako jedyne skuteczne rozwiązanie</a></li>
+        <li><a href="#podsumowanie">Podsumowanie</a></li>
+      </ol>
+    </nav>
+
+    <div class="post-body">
+
+      <h2 id="jak-dziala-imei">Jak działa IMEI i dlaczego jest kluczowy dla prywatności</h2>
+
+      <p>IMEI (International Mobile Equipment Identity) to 15-cyfrowy unikalny numer identyfikacyjny przypisany do każdego urządzenia wyposażonego w modem GSM/LTE. W przeciwieństwie do adresu IP, który możesz zmienić używając VPN, IMEI jest zakodowany na stałe w sprzęcie — jest to Twój cyfrowy odcisk palca, który pozostaje z urządzeniem przez cały czas jego użytkowania.</p>
+
+      <p>Kiedy łączysz się z siecią komórkową, Twój modem wysyła IMEI do operatora. Ten numer trafia do bazy danych, gdzie jest powiązany z Twoją kartą SIM (IMSI), danymi osobowymi z umowy oraz lokalizacją. W ten sposób powstaje kompletny profil: kto (dane osobowe), czym (urządzenie po IMEI), gdzie (lokalizacja BTS) i kiedy (timestamp każdego połączenia).</p>
+
+      <p>Kluczowy fakt: IMEI jest wysyłany przy każdym połączeniu do sieci — niezależnie od tego, czy używasz VPN, czy nie. VPN szyfruje dane, ale nie maskuje IMEI. To dlatego służby mogą śledzić urządzenia nawet przy aktywnym tunelu VPN.</p>
+
+      <p>Więcej o tym jak działa <a href="/o-nas.html">Mudi Ghost</a> — i dlaczego <a href="/cennik.html">router VPN ze zmiennym IMEI</a> rozwiązuje ten problem sprzętowo, dając Ci nową tożsamość jednym ruchem przełącznika.</p>
+
+
+      <h2 id="co-to-imei-spoofing">Czym jest IMEI spoofing — jak działają "aplikacje do zmiany IMEI"</h2>
+
+      <p>IMEI spoofing to technika, w której system operacyjny (najczęściej Android) odczytuje prawdziwy IMEI z modemu, ale raportuje do aplikacji i sieci fałszywy, wybrany przez użytkownika numer. Brzmi obiecująco? Niestety, to tylko iluzja ochrony.</p>
+
+      <div class="post-highlight">
+        <p><strong>Jak to działa w praktyce:</strong> Aplikacje typu "IMEI changer" lub moduły EdXposed (jak change-imei-android) nie zmieniają rzeczywistego IMEI w modemie. Android OS czyta prawdziwy IMEI z warstwy sprzętowej, ale zwraca do aplikacji wartość zdefiniowaną przez użytkownika. To purely softwareowe rozwiązanie — zmiana jest tylko "widoczna" na poziomie systemu operacyjnego.</p>
+      </div>
+
+      <p>Co to oznacza w praktyce? Kiedy łączysz się z siecią komórkową, Twój modem i tak wysyła prawdziwy IMEI do operatora. Aplikacja typu spoofing tego nie blokuje — działa tylko lokalnie, ukrywając IMEI przed aplikacjami użytkownika, ale nie przed siecią.</p>
+
+      <ul>
+        <li><strong>Spoofing działa tylko w APK</strong> — aplikacje widzą fałszywy IMEI, ale sieć komórkowa widzi prawdziwy</li>
+        <li><strong>Wymaga root</strong> — większość aplikacji do spoofowania wymaga pełnego dostępu roota</li>
+        <li><strong>Niestabilność</strong> — po restarcie urządzenia spoofing przestaje działać</li>
+        <li><strong>Konflikty systemowe</strong> — modyfikacja warstwy raportowania IMEI może powodować błędy w działaniu sieci</li>
+      </ul>
+
+
+      <h2 id="dlaczego-spoofing-nie-dziala">Dlaczego spoofing nie działa — wykrywanie przez operatorów</h2>
+
+      <p>Mobile carriers mogą łatwo wykryć urządzenia z manipulowanym IMEI. Oto dlaczego spoofing jest praktycznie bezużyteczny dla ochrony prywatności:</p>
+
+      <p><strong>1. Niezgodność identyfikatorów:</strong> Jeśli Twój fałszywy IMEI nie pasuje do innych identyfikatorów urządzenia (TAC — Type Allocation Code, numer seryjny modemu, cechy sprzętowe), systemy automatycznie oznaczają urządzenie jako podejrzane. Operatorzy porównują IMEI z bazą urządzeń — niezgodność wzbudza natychmiastowy alert.</p>
+
+      <p><strong>2. Analiza zachowania:</strong> Urządzenie, które często zmienia IMEI, jest nietypowe i wzbudza podejrzenia. Normalne telefony rzadko lub nigdy nie zmieniają IMEI. Częste zmiany sygnalizują próbę uniknięcia śledzenia — co przyciąga uwagę zamiast ją odwracać.</p>
+
+      <div class="post-warn">
+        ⚠️ <strong>Ważne:</strong> Wiele krajów (w tym Polska na podstawie Prawa telekomunikacyjnego) zabrania świadomej manipulacji IMEI. Używanie aplikacji do spoofowania może mieć konsekwencje prawne, a wykrycie próby ukrycia prawdziwego IMEI może skutkować blokadą urządzenia w sieci.
+      </div>
+
+      <p><strong>3. Współpraca międzynarodowa:</strong> Służby i operatorzy współpracują międzynarodowo. Twój prawdziwy IMEI widoczny za granicą zostaje powiązany z Twoim profilem w innych krajach — nawet jeśli w międzyczasie używałeś fałszywego IMEI w Polsce.</p>
+
+      <p><strong>4. IMSI Catcher (StingRay):</strong> Pseudostacje bazowe używane przez służby wymuszają na urządzeniu wysłanie IMEI niezależnie od ustawień systemowych. Nawet najlepszy spoofing nie działa przeciwko temu typowi ataku — modem zawsze odpowie prawdziwym numerem.</p>
+
+
+      <h2 id="rzeczywista-zmiana-imei">Rzeczywista zmiana IMEI — Mudi Ghost jako jedyne skuteczne rozwiązanie</h2>
+
+      <p>Jeśli chcesz <strong>rzeczywistej ochrony prywatności</strong>, potrzebujesz rozwiązania sprzętowego, które faktycznie zmienia IMEI na poziomie modemu — nie tylko w systemie operacyjnym. To dokładnie to, co oferuje Mudi Ghost.</p>
+
+      <p>Mudi Ghost to hardened router VPN z wbudowanym modemem LTE, który ma fizyczny przełącznik generujący losowy, prawdziwy IMEI przy każdym uruchomieniu. Każde włączenie routera = nowy, unikalny IMEI zarejestrowany w sieci komórkowej.</p>
+
+      <div class="post-highlight">
+        <p><strong>Co wyróżnia Mudi Ghost:</strong></p>
+        <ul>
+          <li>Zmiana IMEI na poziomie sprzętowym — modem generuje nowy numer przy każdym uruchomieniu</li>
+          <li>Nowa karta SIM (prepaid) — kompletna zmiana tożsamości</li>
+          <li>WireGuard VPN — szyfruje cały ruch, ukrywa IP</li>
+          <li>Kill switch — automatyczny rozłącz w przypadku utraty VPN</li>
+          <li>Randomizacja MAC — dodatkowa warstwa ochrony</li>
+        </ul>
+      </div>
+
+      <p>W przeciwieństwie do aplikacji do spoofowania, Mudi Ghost daje Ci <strong>kompletną, operacyjną ochronę</strong>. Urządzenie pojawia się w sieci jako zupełnie nowe — bez żadnej historii, bez powiązania z poprzednią aktywnością. Dla służb i algorytmów śledzących to urządzenie widziane po raz pierwszy.</p>
+
+      <p>To podejście "operacyjne" — traktowanie anonimowości jako procesu, nie produktu. Każde wyłączenie i włączenie routera = nowa tożsamość. Nie potrzebujesz specjalistycznego oprogramowania ani umiejętności hakowania. Po prostu wciskasz przełącznik.</p>
+
+
+      <h2 id="podsumowanie">Podsumowanie — <span class="accent">IMEI spoofing — czy to działa?</span></h2>
+
+      <p>IMEI spoofing — czy to działa? Odpowiedź brzmi: <strong>NIE</strong>. Aplikacje do zmiany IMEI dają fałszywe poczucie bezpieczeństwa. Sieć komórkowa i tak widzi prawdziwy IMEI, operatorzy łatwo wykrywają niezgodności, a służby mają narzędzia (IMSI Catchery) do wymuszenia prawdziwego numeru niezależnie od ustawień systemowych.</p>
+
+      <p>Jedynym skutecznym rozwiązaniem jest <strong>rzeczywista zmiana IMEI na poziomie sprzętowym</strong> — taką ochronę oferuje Mudi Ghost. Fizyczny przełącznik generuje nowy, prawdziwy IMEI przy każdym uruchomieniu, dając Ci nową tożsamość w sieci komórkowej bez żadnej korelacji z poprzednią aktywnością.</p>
+
+      <p>Jeśli poważnie myślisz o prywatności w sieci komórkowej, spoofing to lipa. Mudi Ghost to jedyne rozwiązanie, które faktycznie działa.</p>
+
+
+      <div class="post-cta">
+        <h3>Szukasz <span class="accent">Rzeczywistej Ochrony Prywatności?</span></h3>
+        <p>Mudi Ghost to hardened router VPN ze zmiennym IMEI — gotowy do użycia od pierwszego włączenia. WireGuard VPN, kill switch, randomizacja MAC. 350 EUR.</p>
+        <a href="/cennik.html" class="btn btn-solid">Zobacz Cennik — 350 EUR</a>
+      </div>
+
+
+      <div class="post-tags">
+        <span class="tag">IMEI spoofing</span>
+        <span class="tag">zmiana IMEI</span>
+        <span class="tag">prywatność w sieci</span>
+        <span class="tag">router VPN</span>
+        <span class="tag">Mudi Ghost</span>
+      </div>
+
+    </div>
+  </article>
+</div>
+
+
+<section class="related-section">
+  <div class="content-wrap">
+    <p class="section-label">Blog</p>
+    <h2 class="section-title">Powiązane <span class="accent">Artykuły</span></h2>
+    <div class="related-grid">
+      <a href="/blog/co-to-jest-imei-anonimowosc" class="related-card">
+        <div class="rc-date">23 marca 2026</div>
+        <h4>Co to jest IMEI i jak wpływa na anonimowość w sieci komórkowej</h4>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">MUDI <span class="accent">GHOST</span></div>
+      <div class="footer-tagline">Advanced Privacy Firmware — Hardened Security Edition</div>
+      <div class="footer-email">mudi.ghost&#64;proton.me</div>
+    </div>
+    <nav class="footer-links" aria-label="Linki w stopce">
+      <a href="/">Strona Główna</a>
+      <a href="/cennik.html">Cennik</a>
+      <a href="/o-nas.html">O Nas</a>
+      <a href="/blog/">Blog</a>
+      <a href="/kontakt.html">Kontakt</a>
+      <a href="/polityka-prywatnosci.html">Polityka Prywatności</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Mudi Ghost. Wszelkie prawa zastrzeżone.</span>
+    <span>Produkt przeznaczony wyłącznie do legalnego użytku.</span>
+  </div>
+</footer>
+
+<script>
+  const path = window.location.pathname;
+  document.querySelectorAll('.site-nav a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === path || href === path + '/') a.classList.add('active');
+  });
+  const toggle = document.getElementById('navToggle');
+  const nav = document.getElementById('siteNav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  nav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+
+<script data-goatcounter="https://mudighost.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
+</body>
+</html>
