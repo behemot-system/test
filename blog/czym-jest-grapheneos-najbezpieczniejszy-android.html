@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GrapheneOS — najbezpieczniejszy Android | Mudi Ghost</title>
+
+  <meta name="description" content="GrapheneOS to hardened system operacyjny bazujący na Androidzie — bez usług Google, z maksymalną ochroną prywatności. Poznaj możliwości.">
+
+  <meta name="keywords" content="GrapheneOS, prywatność Android, bezpieczny telefon, Android bez Google, hardened OS, privacy ROM, Graphene OS, prywatny system operacyjny">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Mudi Ghost">
+  <link rel="canonical" href="https://mudighost.com/blog/czym-jest-grapheneos-najbezpieczniejszy-android">
+
+  <meta property="og:title" content="GrapheneOS — najbezpieczniejszy Android | Mudi Ghost">
+  <meta property="og:description" content="GrapheneOS to hardened system operacyjny bazujący na Androidzie — bez usług Google, z maksymalną ochroną prywatności. Poznaj możliwości.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mudighost.com/blog/czym-jest-grapheneos-najbezpieczniejszy-android">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="Mudi Ghost">
+  <meta property="article:published_time" content="2026-03-27T00:00:00+00:00">
+  <meta property="article:tag" content="GrapheneOS">
+  <meta property="article:tag" content="prywatność Android">
+  <meta property="article:tag" content="bezpieczny telefon">
+  <meta property="article:tag" content="Android bez Google">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GrapheneOS — najbezpieczniejszy Android | Mudi Ghost">
+  <meta name="twitter:description" content="GrapheneOS to hardened system operacyjny bazujący na Androidzie — bez usług Google, z maksymalną ochroną prywatności.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "GrapheneOS — najbezpieczniejszy Android",
+    "description": "GrapheneOS to hardened system operacyjny bazujący na Androidzie — bez usług Google i z maksymalną ochroną prywatności.",
+    "url": "https://mudighost.com/blog/czym-jest-grapheneos-najbezpieczniejszy-android",
+    "datePublished": "2026-03-27",
+    "dateModified": "2026-03-27",
+    "author": { "@type": "Organization", "name": "Mudi Ghost", "url": "https://mudighost.com" },
+    "publisher": { "@type": "Organization", "name": "Mudi Ghost", "url": "https://mudighost.com" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://mudighost.com/blog/czym-jest-grapheneos-najbezpieczniejszy-android" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Strona Główna", "item": "https://mudighost.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mudighost.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "GrapheneOS", "item": "https://mudighost.com/blog/czym-jest-grapheneos-najbezpieczniejszy-android" }
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    .breadcrumb {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 16px 40px 0;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--cyan); }
+    .breadcrumb span { color: var(--border); }
+
+    .post-wrap {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 48px 40px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .post-wrap h1 {
+      font-family: var(--font-head);
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 2px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .post-wrap h1 .accent { color: var(--cyan); }
+
+    .post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .post-meta span::before { content: '// '; color: var(--cyan); }
+
+    .post-intro {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 36px;
+      padding: 22px 26px;
+      background: var(--dark2);
+      border-left: 4px solid var(--cyan);
+    }
+
+    .post-toc {
+      background: var(--dark2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--cyan);
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .post-toc h4 {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .post-toc h4::before { content: '// '; }
+    .post-toc ol { list-style: none; display: flex; flex-direction: column; gap: 6px; counter-reset: toc-counter; padding: 0; margin: 0; }
+    .post-toc ol li { counter-increment: toc-counter; }
+    .post-toc ol li a {
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      line-height: 1.4;
+      transition: color 0.2s;
+    }
+    .post-toc ol li a::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      flex-shrink: 0;
+      padding-top: 1px;
+    }
+    .post-toc ol li a:hover { color: var(--cyan); }
+
+    .post-body h2 {
+      font-family: var(--font-head);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 44px 0 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .post-body h2 .accent { color: var(--cyan); }
+
+    .post-body p {
+      font-size: 16px;
+      line-height: 1.85;
+      margin-bottom: 18px;
+      color: var(--text);
+    }
+    .post-body strong { color: var(--white); }
+    .post-body a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
+    .post-body a:hover { opacity: 0.75; }
+
+    .post-body ul, .post-body ol {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .post-body ul li { position: relative; padding-left: 28px; font-size: 15px; line-height: 1.7; color: var(--text); }
+    .post-body ul li::before { content: '›'; position: absolute; left: 0; top: 2px; color: var(--cyan); font-family: var(--font-mono); font-size: 18px; font-weight: 700; }
+    .post-body ol { counter-reset: ol-counter; }
+    .post-body ol li::before {
+      content: counter(ol-counter, decimal-leading-zero);
+      counter-increment: ol-counter;
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      flex-shrink: 0;
+      padding-top: 3px;
+      margin-right: 10px;
+    }
+
+    .post-body ul li strong { color: var(--cyan); font-size: 16px; }
+
+    .post-cta {
+      background: var(--dark2);
+      border: 2px solid var(--cyan);
+      padding: 28px 32px;
+      margin: 48px 0 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .post-cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--cyan);
+      box-shadow: 0 0 16px var(--cyan-glow);
+    }
+    .post-cta h3 {
+      font-family: var(--font-head);
+      font-size: 22px;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .post-cta p { font-size: 15px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
+
+    .post-cta .btn { display: inline-block; font-family: var(--font-mono); font-size: 14px; font-weight: 600; color: var(--dark); background: var(--cyan); padding: 14px 28px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; border: none; cursor: pointer; transition: all 0.2s; }
+    .post-cta .btn:hover { background: var(--white); box-shadow: 0 0 20px rgba(0,242,255,0.4); }
+
+    .post-tags { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .tag { font-family: var(--font-mono); font-size: 11px; padding: 4px 12px; border: 1px solid var(--border); color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+    .post-highlight {
+      background: var(--dark3);
+      border: 1px solid var(--cyan);
+      padding: 18px 22px;
+      margin: 24px 0;
+      box-shadow: inset 0 0 20px rgba(0,242,255,0.03);
+    }
+    .post-highlight p { margin-bottom: 0; }
+
+    .post-warn {
+      background: rgba(255,160,0,0.04);
+      border-left: 3px solid #ffa000;
+      padding: 14px 18px;
+      margin: 24px 0;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    @media (max-width: 768px) {
+      .post-wrap { padding: 32px 24px 60px; }
+      .post-wrap h1 { font-size: 26px; letter-spacing: 1px; }
+      .breadcrumb { padding: 16px 24px 0; }
+      .post-intro { font-size: 16px; padding: 16px 18px; }
+      .post-body h2 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="/" class="logo">MUDI <span class="accent">GHOST</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    </span></span></span>
+  </button>
+  <nav class="site-nav" id="siteNav" role="navigation" aria-label="Główna nawigacja">
+    <a href="/">Strona Główna</a>
+    <a href="/#funkcje">Funkcje</a>
+    <a href="/o-nas.html">O Nas</a>
+    <a href="/cennik.html">Cennik</a>
+    <a href="/blog/">Blog</a>
+    <a href="/kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/">Strona Główna</a>
+  <span>›</span>
+  <a href="/blog/">Blog</a>
+  <span>›</span>
+  <span style="color:var(--text)">GrapheneOS</span>
+</nav>
+
+<div class="post-wrap">
+  <article itemscope itemtype="https://schema.org/Article">
+
+    <p class="section-label">Blog — Prywatność w Sieci</p>
+
+    <h1>Czym jest <span class="accent">GrapheneOS</span> i dlaczego to najbezpieczniejszy Android</h1>
+
+    <div class="post-meta">
+      <span>27 marca 2026</span>
+      <span>Czas czytania: 9 min</span>
+    </div>
+
+    <div class="post-intro">
+      <strong>GrapheneOS</strong> to darmowy, open-source system operacyjny bazujący na Android Open Source Project — stworzony z myślą o maksymalnym bezpieczeństwie i ochronie prywatności użytkownika. W przeciwieństwie do standardowego Androida, <strong>GrapheneOS nie zawiera żadnych usług Google</strong> i oferuje szereg zaawansowanych mechanizmów ochrony, które czynią go jednym z najbezpieczniejszych wyborów dla osób świadomych cyfrowych zagrożeń. Jeśli szukasz rozwiązania dla prywatności na poziomie profesjonalnym — ten artykuł wyjaśni Ci wszystkie kluczowe aspekty.
+    </div>
+
+    <nav class="post-toc" aria-label="Spis treści">
+      <h4>Spis Treści</h4>
+      <ol>
+        <li><a href="#co-to-jest-grapheneos">Co to jest GrapheneOS — definicja i pochodzenie</a></li>
+        <li><a href="#funkcje-bezpieczenstwo">Funkcje bezpieczeństwa i prywatności</a></li>
+        <li><a href="#grapheneos-vs-android">GrapheneOS vs stock Android — kluczowe różnice</a></li>
+        <li><a href="#dla-kogo-grapheneos">Dla kogo jest GrapheneOS i jak zacząć</a></li>
+        <li><a href="#podsumowanie">Podsumowanie</a></li>
+      </ol>
+    </nav>
+
+    <div class="post-body">
+
+      <h2 id="co-to-jest-grapheneos">Co to jest <span class="accent">GrapheneOS</span> — definicja i pochodzenie</h2>
+
+      <p><strong>GrapheneOS</strong> to darmowy, open-source system operacyjny dla urządzeń mobilnych, oparty na projekcie Android Open Source Project (AOSP). Projekt powstał w <strong>2014 roku</strong> jako Android Hardening — odpowiedź na rosnące zagrożenia związane z bezpieczeństwem i prywatnością w mobilnym ekosystemie Google. W <strong>2019 roku</strong> projekt został przemianowany na GrapheneOS i od tego czasu system jest rozwijany przez <strong>organizację non-profit</strong> o tej samej nazwie.</p>
+
+      <p>Kluczowa różnica między GrapheneOS a standardowym Androidem polega na <strong>całkowitym usunięciu wszystkich komponentów Google</strong>. System nie zawiera żadnych usług Google Play Services, żadnych aplikacji Google, żadnego śledzenia ze strony producenta. To czysty, odseparowany od Google system operacyjny, który daje użytkownikowi <strong>pełną kontrolę</strong> nad tym, jakie aplikacje instaluje i jakie uprawnienia im przyznaje.</p>
+
+      <p>GrapheneOS jest dostępny wyłącznie dla urządzeń <strong>Google Pixel</strong> — począwszy od Pixel 6, aż po najnowsze modele z rodziny Pixel 10. Wybór Pixeli jako docelowej platformy nie jest przypadkowy: te urządzenia oferują najlepsze wsparcie sprzętowe dla funkcji bezpieczeństwa, w tym <strong>kryptograficzny chip bezpieczeństwa Titan M2</strong>, pełne wsparcie dla <strong>Verified Boot</strong> oraz otwarty bootloader, który umożliwia instalację niestandardowych systemów operacyjnych bez utraty kluczowych funkcji bezpieczeństwa. GrapheneOS zawiera również własną przeglądarkę <strong>Vanadium</strong> — wersję Chromium zmodyfikowaną pod kątem bezpieczeństwa i prywatności, wolną od elementów śledzących obecnych w standardowym Chrome.</p>
+
+      <p>Warto podkreślić, że <strong>GrapheneOS to nie jest typowy custom ROM</strong> — to zaawansowany projekt bezpieczeństwa, który stale ewoluuje i wprowadza nowe mechanizmy ochrony. Zespół deweloperów ściśle współpracuje z społecznością security research, regularnie publikując raporty o zagrożeniach i sposobach ich mitygacji. Dla osób, które cenią sobie <a href="/">bezpieczeństwo cyfrowe</a> na najwyższym poziomie, GrapheneOS stanowi <strong>fundament cyfrowej ochrony</strong>.</p>
+
+      <h2 id="funkcje-bezpieczenstwo">Funkcje <span class="accent">bezpieczeństwa</span> i prywatności</h2>
+
+      <p>GrapheneOS wprowadza szereg zaawansowanych funkcji, które znacząco wykraczają poza to, co oferuje stockowy Android:</p>
+
+      <ul>
+        <li><strong>Brak usług Google</strong> — całkowite odseparowanie od ekosystemu Google, zero śledzenia</li>
+        <li><strong>Sandboxed Google Play</strong> — opcjonalne uruchomienie Google Play w pełnej izolacji</li>
+        <li><strong>Exploit protection</strong> — GWP-ASAN, Oracle RSG, Shadow Call Stack, hardened CFI</li>
+        <li><strong>Network permission</strong> — możliwość zablokowania dostępu do sieci dla aplikacji</li>
+        <li><strong>Sensors permission</strong> — kontrola dostępu do kamery, mikrofonu, GPS i akcelerometru</li>
+        <li><strong>Verified Boot</strong> — weryfikacja integralności systemu na poziomie sprzętowym</li>
+        <li><strong>User profile isolation</strong> — w pełni izolowane profile użytkownika</li>
+      </ul>
+
+      <div class="post-highlight">
+        <p><strong>Sandboxed Google Play</strong> — jedną z najważniejszych funkcji GrapheneOS jest możliwość instalacji Google Play w trybie sandboxed. Oznacza to, że nawet jeśli potrzebujesz aplikacji wymagających Google Services (jak bankowe aplikacje mobilne), możesz je uruchomić w <strong>całkowicie odizolowanym środowisku</strong>, gdzie Google Play ma minimalne uprawnienia i nie ma dostępu do danych z innych części systemu.</p>
+      </div>
+
+      <p>System oferuje również zaawansowane opcje lock screen, w tym możliwość wymuszenia wyłączenia USB i pogo pins gdy urządzenie jest zablokowane, co zapobiega atakom typu <strong>juice jacking</strong> oraz fizycznym próbom dostępu do danych przez porty. Połączenie GrapheneOS z rozwiązaniami sprzętowymi takimi jak <a href="/cennik.html"><strong>Mudi Ghost</strong></a> tworzy <strong>kompletne, wielowarstwowe rozwiązanie</strong> dla osób, które potrzebują ochrony na poziomie systemowym i sieciowym.</p>
+
+      <h2 id="grapheneos-vs-android">GrapheneOS vs stock <span class="accent">Android</span> — kluczowe różnice</h2>
+
+      <ol>
+        <li><strong>Usługi Google</strong> — Stock Android jest głęboko zintegrowany z ekosystemem Google. GrapheneOS eliminuje je całkowicie.</li>
+        <li><strong>Aktualizacje bezpieczeństwa</strong> — GrapheneOS wydaje łatki znacznie szybciej niż jakikolwiek producent Androida.</li>
+        <li><strong>Kontrola uprawnień</strong> — szczegółowa kontrola nad każdym aspektem działania aplikacji, w tym blokowanie sieci i czujników.</li>
+        <li><strong>Privacy sandbox</strong> — zaawansowany model izolacji aplikacji, gdzie każda działa w maksymalnie odizolowanym środowisku.</li>
+        <li><strong>User profile isolation</strong> — możliwość tworzenia wielu w pełni izolowanych profili użytkownika.</li>
+      </ol>
+
+      <div class="post-warn">
+        ⚠️ <strong>Ważna uwaga</strong> — GrapheneOS wymaga urządzenia Google Pixel z odblokowanym bootloaderem. Jeśli Twój telefon jest powiązany z operatorem lub posiada wersję OEM z zablokowanym bootloaderem, instalacja może być niemożliwa. Przed zakupem upewnij się, że wybierasz wariant odblokowany (nie Carrier Locked).
+      </div>
+
+      <p>Nawet najlepszy system operacyjny nie zapewni pełnej ochrony, jeśli warstwa sprzętowa pozostaje podatna na identyfikację. Dlatego połączenie GrapheneOS z urządzeniem oferującym sprzętową zmianę identyfikatorów sieciowych tworzy praktycznie <strong>nieprzeniknioną barierę</strong> dla tradycyjnych metod śledzenia. <a href="/cennik.html"><strong>Router VPN ze zmiennym IMEI</strong></a> taki jak Mudi Ghost uzupełnia ochronę systemową o rozwiązania sprzętowe, które eliminują możliwość identyfikacji urządzenia na poziomie sieci komórkowej.</p>
+
+      <h2 id="dla-kogo-grapheneos">Dla kogo jest <span class="accent">GrapheneOS</span> i jak zacząć</h2>
+
+      <p>GrapheneOS nie jest systemem dla każdego — wymaga pewnej wiedzy technicznej i gotowości do rezygnacji z części wygód oferowanych przez stockowego Androida. Dla określonych grup użytkowników jest to jednak inwestycja nieoceniona:</p>
+
+      <ul>
+        <li><strong>Dziennikarze śledczy i aktywiści</strong> — osoby pracujące w środowiskach wysokiego ryzyka.</li>
+        <li><strong>Przedsiębiorcy i menedżerowie</strong> — osoby zarządzające wrażliwymi informacjami biznesowymi.</li>
+        <li><strong>Specjaliści IT i security researchers</strong> — profesjonaliści ceniący pełną kontrolę.</li>
+        <li><strong>Osoby dochodzeniowe i prawne</strong> — adwokaci, detektywi prywatni, prowadzący sprawy wymagające poufności.</li>
+      </ul>
+
+      <p>Rozpoczęcie pracy z GrapheneOS wymaga kompatybilnego urządzenia Pixel — najlepiej najnowszego modelu z rodziny <strong>Pixel 10</strong> (Pixel 10 Pro, Pixel 10 Pro XL lub Pixel 10 Pro Fold). Następnie odblokowujesz bootloader i instalujesz system za pomocą <strong>web installera</strong> na grapheneos.org. Po instalacji warto stopniowo konfigurować uprawnienia aplikacji i instalować oprogramowanie z zaufanych źródeł: <strong>F-Droid</strong> oraz <strong>Aurora Store</strong>.</p>
+
+      <h2 id="podsumowanie">Podsumowanie — <span class="accent">GrapheneOS</span> jako fundament prywatności</h2>
+
+      <p><strong>GrapheneOS</strong> reprezentuje najwyższy standard mobilnego bezpieczeństwa wśród dostępnych publicznie systemów operacyjnych. Całkowite odseparowanie od ekosystemu Google, zaawansowane mechanizmy ochrony pamięci, szczegółowa <strong>kontrola uprawnień aplikacji</strong> oraz szybkie aktualizacje bezpieczeństwa czynią go wyborem numer jeden dla osób, które priorytetowo traktują <strong>prywatność i bezpieczeństwo</strong> swojej komunikacji mobilnej.</p>
+
+      <p>Prawdziwa prywatność wymaga holistycznego podejścia obejmującego zarówno oprogramowanie (system operacyjny, aplikacje, sieci VPN), jak i sprzęt (urządzenia z odpowiednimi zabezpieczeniami). Połączenie GrapheneOS z rozwiązaniami sprzętowymi takimi jak <a href="/cennik.html"><strong>Mudi Ghost</strong></a> tworzy <strong>wielowarstwową ochronę</strong>, która skutecznie utrudnia śledzenie na poziomie zarówno systemowym, jak i sieciowym. Na temat sprzętowej ochrony przed śledzeniem pisaliśmy też w artykule <a href="/blog/co-to-jest-imei-anonimowosc"><strong>co to jest IMEI</strong></a> oraz wyjaśniliśmy dlaczego <a href="/blog/imei-spoofing-czy-to-dziala"><strong>IMEI spoofing nie działa</strong></a>.</p>
+
+      <p>Jeśli poważnie myślisz o ochronie swojej cyfrowej tożsamości — GrapheneOS jest punktem wyjścia, od którego warto zacząć budowę prywatnego ekosystemu mobilnego.</p>
+
+      <div class="post-cta">
+        <h3>Szukasz <span class="accent">Rzeczywistej Ochrony Prywatności?</span></h3>
+        <p>Mudi Ghost to <strong>hardened router VPN ze zmiennym IMEI</strong> — gotowy do użycia od pierwszego włączenia. WireGuard VPN, kill switch, randomizacja MAC.</p>
+        <a href="/cennik.html" class="btn">Zobacz Cennik</a>
+      </div>
+
+      <div class="post-tags">
+        <span class="tag">GrapheneOS</span>
+        <span class="tag">prywatność Android</span>
+        <span class="tag">bezpieczny telefon</span>
+        <span class="tag">Android bez Google</span>
+        <span class="tag">hardened OS</span>
+        <span class="tag">privacy ROM</span>
+        <span class="tag">Mudi Ghost</span>
+      </div>
+
+    </div>
+  </article>
+</div>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">MUDI <span class="accent">GHOST</span></div>
+      <div class="footer-tagline">Advanced Privacy Firmware — Hardened Security Edition</div>
+      <div class="footer-email">mudi.ghost&#64;proton.me</div>
+    </div>
+    <nav class="footer-links" aria-label="Linki w stopce">
+      <a href="/">Strona Główna</a>
+      <a href="/cennik.html">Cennik</a>
+      <a href="/o-nas.html">O Nas</a>
+      <a href="/blog/">Blog</a>
+      <a href="/kontakt.html">Kontakt</a>
+      <a href="/polityka-prywatnosci.html">Polityka Prywatności</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Mudi Ghost. Wszelkie prawa zastrzeżone.</span>
+    <span>Produkt przeznaczony wyłącznie do legalnego użytku.</span>
+  </div>
+</footer>
+
+<script>
+  const path = window.location.pathname;
+  document.querySelectorAll('.site-nav a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === path || href === path + '/') a.classList.add('active');
+  });
+  const toggle = document.getElementById('navToggle');
+  const nav = document.getElementById('siteNav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  nav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+
+<script data-goatcounter="https://mudighost.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
