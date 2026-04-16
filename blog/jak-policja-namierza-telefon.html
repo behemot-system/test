@@ -184,7 +184,7 @@
         <p><strong>Co to jest IMSI?</strong> To 15-cyfrowy numer zapisany na karcie SIM, jednoznacznie identyfikujący użytkownika w sieci komórkowej. Składa się z: kodu kraju (MCC, 3 cyfry), kodu operatora (MNC, 2-3 cyfry) i numeru subskrybenta (MSIN, do 10 cyfr). Przykład: <strong>260 01 1234567890</strong> — Polska, operator Play, numer abonenta.</p>
       </div>
 
-      <p>Problem jest fundamentalny: <strong>IMSI jest wysyłany w czystej formie przy każdym połączeniu</strong>. W przeciwieństwie do zaszyfrowanej treści rozmowy, sam identyfikator podróżuje otwartym tekstem. To oznacza że każdy kto może nasłuchiwać na poziomie stacji bazowej — a takich urządzeń jest na rynku wiele — może poznać Twoje IMSI.</p>
+      <p>Problem jest fundamentalny: <strong>IMSI jest wysyłany w czystej formie przy każdym połączeniu</strong>. W przeciwieństwie do zaszyfrowanej treści rozmowy, sam identyfikator podróżuje otwartym tekstem. To oznacza że każdy kto może nasłuchiwać na poziomie stacji bazowej — a takich urządzeń jest na rynku wiele — może poznać Twoje IMSI. Dlatego policja namierza telefon tak skutecznie, nawet jeśli ofiara myśli że jest chroniona.</p>
 
       <h2 id="stingray"><span class="accent">Stingray</span> — pułapka na telefony, którą można postawić w dowolnym miejscu</h2>
 
@@ -286,16 +286,16 @@
         <li><strong>Zmiana IMEI</strong> — najskuteczniejsza metoda na poziomie urządzenia. Zmiana IMEI sprawia że dla sieci to zupełnie nowe urządzenie. Ciągłość identyfikacji zostaje przerwana. Tak działa <a href="/blog/mudi-ghost-skuteczna-zmiana-imei.html"><strong>Mudi Ghost ze sprzętową zmianą IMEI</strong></a>.</li>
         <li><strong>Tryb samolotowy kiedy nie potrzebujesz łączności</strong> — najprostsza metoda. Wyłączasz wszystkie nadajniki w telefonie. Nikt nie może Cię namierzyć kiedy nie masz połączenia z siecią.</li>
         <li><strong>Karta SIM bez rejestracji lub prepaid</strong> — utrudnia powiązanie IMSI z tożsamością. W wielu krajach można kupić bez dokumentów.</li>
-        <li><strong> VPN na poziomie routera</strong> — szyfruje cały ruch przed wyjściem z urządzenia. <a href="/blog/vpn-vs-proxy-vs-tor.html">VPN vs Proxy vs Tor</a> — porównanie rozwiązań.</li>
+        <li><strong>VPN na poziomie routera</strong> — szyfruje cały ruch przed wyjściem z urządzenia. <a href="/blog/vpn-vs-proxy-vs-tor.html">VPN vs Proxy vs Tor</a> — porównanie rozwiązań.</li>
         <li><strong>Aplikacje z E2EE</strong> — Signal, WhatsApp, iMessage. Chronią treść, nie metadane.</li>
-        <li><strong>Physical security phone</strong> — osobne urządzenie do pracy z wrażliwymi kontaktami. Wyłączone kiedy niepotrzebne.</li>
+        <li><strong>Physical security phone</strong> — osobne urządzenie do pracy z wrażliwymi kontaktami. Wyłączone kiedy niepotrzebne. <a href="/blog/czym-jest-grapheneos-najbezpieczniejszy-android.html"><strong>GrapheneOS</strong></a> to najbezpieczniejszy wybór jeśli chodzi o hardened Android.</li>
       </ul>
 
       <p>Pamiętaj że żadna pojedyncza metoda nie daje pełnej ochrony. Dopiero <strong>kombinacja kilku</strong> — zmiana IMEI, prepaid SIM, VPN, physical phone separation — utrudnia śledzenie na tyle żeby służby szukały łatwiejszych celów.</p>
 
       <h2 id="podsumowanie">Podsumowanie — <span class="accent">Jak Policja Namierza Twój Telefon</span></h2>
 
-      <p>Mechanizmy śledzenia telefonów są zaawansowane, ale nie tajemne. <strong>IMSI</strong> to Twój niezmienny identyfikator w sieci — jednorazowo pozyskany pozwala śledzić Cię miesiącami. <strong>Stingray</strong> daje służbom mobilną pułapkę którą można ustawić w dowolnym miejscu — na demonstracji, przy spotkaniu, w samolocie. <strong>Triangulacja</strong> pozwala zlokalizować Cię z dokładnością do kilkudziesięciu metrów bez Twojej wiedzy. <strong>SS7</strong> to globalna luka przez którą hakerzy i służby mogą przechwytywać SMS-y, lokalizację, połączenia. <strong>SORM</strong> to prawne narzędzie które zobowiązuje operatorów do udostępniania wszystkiego na każde żądanie.</p>
+      <p>Mechanizmy śledzenia telefonów są zaawansowane, ale nie tajemne. Policja namierza telefon wykorzystując <strong>IMSI</strong> — Twój niezmienny identyfikator w sieci — jednorazowo pozyskany pozwala śledzić Cię miesiącami. <strong>Stingray</strong> daje służbom mobilną pułapkę którą można ustawić w dowolnym miejscu — na demonstracji, przy spotkaniu, w samolocie. <strong>Triangulacja</strong> pozwala zlokalizować Cię z dokładnością do kilkudziesięciu metrów bez Twojej wiedzy. <strong>SS7</strong> to globalna luka przez którą hakerzy i służby mogą przechwytywać SMS-y, lokalizację, połączenia. <strong>SORM</strong> to prawne narzędzie które zobowiązuje operatorów do udostępniania wszystkiego na każde żądanie.</p>
 
       <p>Dla osób które rozumieją ryzyko — dziennikarzy, aktywistów, prawników, biznesmenów — ta wiedza nie jest paraliżująca. Jest <strong>narzędziem do podejmowania świadomych decyzji</strong>. Wiesz jak działają mechanizmy inwigilacji — możesz dobrać odpowiednie środki ochrony.</p>
 
