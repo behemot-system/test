@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WiFi Probe Requests — Jak Telefon Cię Śledzi | Mudi Ghost</title>
+  <meta name="description" content="Twój telefon non-stop wysyła zapytania WiFi ujawniające MAC i listę sieci. Dowiedz się jak to działa i jak się chronić.">
+  <meta name="keywords" content="WiFi probe requests, śledzenie WiFi, MAC address spoofing, ochrona prywatności, WiFi tracking, Mudi Ghost">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Mudi Ghost">
+  <link rel="canonical" href="https://mudighost.com/blog/wifi-probe-requests-sledzenie.html">
+  <meta property="og:title" content="WiFi Probe Requests — Jak Twój Telefon Cię Śledzi | Mudi Ghost">
+  <meta property="og:description" content="Twój telefon non-stop wysyła WiFi probe requests — zapytania które ujawniają Twój MAC i listę sieci. Dowiedz się jak to działa i jak się chronić.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mudighost.com/blog/wifi-probe-requests-sledzenie.html">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="article:published_time" content="2026-05-05">
+  <meta property="article:modified_time" content="2026-05-05">
+  <meta property="article:tag" content="WiFi probe requests">
+  <meta property="article:tag" content="śledzenie WiFi">
+  <meta property="article:tag" content="MAC address spoofing">
+  <meta property="article:tag" content="ochrona prywatności">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="WiFi Probe Requests — Jak Twój Telefon Cię Śledzi">
+  <meta name="twitter:description" content="Twój telefon non-stop wysyła WiFi probe requests. Dowiedz się jak i jak się chronić.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "WiFi Probe Requests — Jak Twój Telefon Cię Śledzi",
+    "description": "Twój telefon non-stop wysyła WiFi probe requests — zapytania które ujawniają Twój MAC i listę sieci. Dowiedz się jak to działa i jak się chronić.",
+    "datePublished": "2026-05-05",
+    "dateModified": "2026-05-05",
+    "author": { "@type": "Organization", "name": "Mudi Ghost" },
+    "publisher": { "@type": "Organization", "name": "Mudi Ghost", "url": "https://mudighost.com" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Strona Główna", "item": "https://mudighost.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mudighost.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "WiFi Probe Requests — Jak Twój Telefon Cię Śledzi", "item": "https://mudighost.com/blog/wifi-probe-requests-sledzenie.html" }
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    :root {
+      --bg: #050a14;
+      --bg-secondary: #0a1628;
+      --text: #e0e6ed;
+      --muted: #6b7c93;
+      --border: #1a2744;
+      --cyan: #00D4FF;
+      --accent: #00D4FF;
+      --dark: #050a14;
+      --white: #ffffff;
+      --font-sans: 'Source Sans 3', sans-serif;
+      --font-mono: 'Share Tech Mono', monospace;
+      --font-heading: 'Rajdhani', sans-serif;
+      --content-w: 760px;
+      --page-w: 1200px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .nav-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(5, 10, 20, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 40px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+
+    .nav-logo:hover { text-decoration: none; }
+
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--cyan); text-decoration: none; }
+
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--muted);
+      margin: 5px 0;
+      transition: all 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg); padding: 20px 40px; border-bottom: 1px solid var(--border); }
+      .nav-links.active { display: flex; }
+      .nav-toggle { display: block; }
+    }
+
+    .breadcrumb {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 16px 40px 0;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--cyan); }
+    .breadcrumb span { color: var(--border); }
+
+    article { max-width: var(--content-w); margin: 0 auto; padding: 60px 40px 80px; position: relative; z-index: 1; }
+    article h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    .post-meta {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 40px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .post-body { font-size: 17px; line-height: 1.7; }
+    .post-body h2 {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--white);
+      margin: 48px 0 20px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .post-body h2:first-of-type { margin-top: 0; }
+    .post-body h2 .accent { color: var(--cyan); }
+
+    .post-body p { margin-bottom: 20px; color: var(--text); }
+    .post-body strong { color: var(--white); font-weight: 600; }
+    .post-body .accent { color: var(--cyan); }
+
+    .post-body ul, .post-body ol {
+      margin: 20px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .post-body ul li {
+      position: relative;
+      padding-left: 28px;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .post-body ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .post-body ul li strong { color: var(--cyan); font-size: 16px; }
+
+    .post-body ol { counter-reset: ol-counter; }
+    .post-body ol li {
+      position: relative;
+      padding-left: 36px;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .post-body ol li::before {
+      content: counter(ol-counter, decimal-leading-zero);
+      counter-increment: ol-counter;
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-right: 8px;
+      padding-top: 3px;
+    }
+
+    .post-body .lead {
+      font-size: 20px;
+      color: var(--white);
+      line-height: 1.6;
+      margin-bottom: 32px;
+      font-weight: 400;
+    }
+
+    .post-cta {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      padding: 32px;
+      margin: 48px 0;
+      text-align: center;
+      border-radius: 4px;
+    }
+    .post-cta h3 {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .post-cta p { color: var(--muted); margin-bottom: 20px; font-size: 15px; }
+    .post-cta .btn {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark);
+      background: var(--cyan);
+      padding: 14px 28px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .post-cta .btn:hover { background: var(--white); text-decoration: none; box-shadow: 0 0 20px rgba(0,242,255,0.4); }
+
+    .post-tags { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .tag { font-family: var(--font-mono); font-size: 11px; padding: 4px 12px; border: 1px solid var(--border); color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+    .related-section { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .related-section h3 { font-family: var(--font-heading); font-size: 20px; color: var(--white); margin-bottom: 20px; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .related-card { background: var(--bg-secondary); border: 1px solid var(--border); padding: 20px; text-decoration: none; transition: all 0.2s; }
+    .related-card:hover { border-color: var(--cyan); text-decoration: none; }
+    .related-card h4 { font-family: var(--font-heading); font-size: 15px; color: var(--white); margin-bottom: 8px; }
+    .related-card p { font-size: 13px; color: var(--muted); }
+
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      padding: 40px;
+      text-align: center;
+      margin-top: 80px;
+    }
+    footer p { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--cyan); }
+
+    @media (max-width: 768px) {
+      article { padding: 40px 20px 60px; }
+      .post-body h2 { font-size: 24px; }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var navToggle = document.getElementById('navToggle');
+      var navLinks = document.querySelector('.nav-links');
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+          navLinks.classList.toggle('active');
+          var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+          navToggle.setAttribute('aria-expanded', !expanded);
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+
+<header class="nav-header">
+  <a href="/" class="nav-logo">MUDI GHOST</a>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="/">Strona Główna</a></li>
+      <li><a href="/#funkcje">Funkcje</a></li>
+      <li><a href="/o-nas.html">O Nas</a></li>
+      <li><a href="/cennik.html">Cennik</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="breadcrumb">
+  <a href="/">Strona Główna</a>
+  <span>›</span>
+  <a href="/blog/">Blog</a>
+  <span>›</span>
+  <span>WiFi Probe Requests — Jak Twój Telefon Cię Śledzi</span>
+</div>
+
+<article itemscope itemtype="https://schema.org/Article">
+  <header>
+    <h1 itemprop="headline">WiFi Probe Requests — Jak Twój Telefon Cię Śledzi (I Co Zrobić)</h1>
+    <div class="post-meta">
+      <time datetime="2026-05-05">// 5 maja 2026</time>
+      <span>// 8 min czytania</span>
+    </div>
+  </header>
+
+  <div class="post-body" itemprop="articleBody">
+    <p class="lead">Siedzisz w kawiarni. Telefon leży na stole. Nawet nie dotykasz ekranu — a on non-stop krzyczy do otoczenia: "JESTEM TUTAJ, TAM I WSZĘDZIE". Te krzyki to <strong>WiFi probe requests</strong> — i wiedzą o Tobie więcej niż myślisz.</p>
+
+    <h2 id="co-to-są-probe-requests">Czym są <span class="accent">probe requests</span> i dlaczego Twój telefon je wysyła</h2>
+
+    <p>Za każdym razem gdy Twój smartphone łączy się z WiFi, dzieje się coś mechanicznego: urządzenie rozgląda się za znanymi sieciami. Robi to przez <strong>probe requests</strong> — specjalne pakiety wysyłane w eter, które pytają "czy jest tu sieć X?", "czy jest tu sieć Y?". Te zapytania idą w świat otwartym tekstem. Każdy może je przechwycić.</p>
+
+    <p>To nie jest błąd czy luka — to <strong>standard IEEE 802.11</strong>, część protokołu WiFi. Urządzenie musi wysłać probe request zanim nawiąże połączenie z siecią. Bez tego żaden hotspot by nie zadziałał. Problem polega na tym, że probe request zawiera znacznie więcej niż tylko pytanie "gdzie jest WiFi".</p>
+
+    <h2 id="co-zawierają-probe-requests">Co dokładnie zawiera <span class="accent">probe request</span></h2>
+
+    <p>Każdy probe request przesyłany przez Twój telefon zawiera dwie rzeczy, które zmieniają wszystko:</p>
+
+    <ul>
+      <li><strong>MAC address</strong> — unikalny identyfikator Twojego urządzenia. To 12-znakowy adres jak "AA:BB:CC:DD:EE:FF" — cyfrowy odcisk palca karty sieciowej. Każdy telefon ma go na stałe wpisany w hardware.</li>
+      <li><strong>Lista SSID</strong> — nazwy wszystkich sieci do których telefon był kiedykolwiek podłączony. Jeśli Twój telefon łączył się z "MojaSiećDomowa", "PizzaExpress", "HotelMarriott", "AeroflotFree" — wszystkie te nazwy są w probe request.</li>
+    </ul>
+
+    <p>Badania przeprowadzone przez University of Hamburg wykazały, że <strong>23.2% probe requests zawiera SSID poprzednio używanych sieci</strong>. Nie jeden, nie dwa — czasem kilkanaście czy kilkadziesiąt nazw. Z nich można wyczytać: gdzie mieszkasz, gdzie pracujesz, gdzie podróżujesz, gdzie jesz, z kim latasz.</p>
+
+    <h2 id="kto-wykorzystuje-probe-requests">Kto wykorzystuje <span class="accent">probe requests</span> do śledzenia</h2>
+
+    <p>Systematyczne zbieranie probe requests to standard w handlu i nadzorze. Ci którzy nasłuchują:</p>
+
+    <ul>
+      <li><strong>Galerie handlowe i sklepy</strong> — instalują access pointy które nasłuchują wszystkich przechodzących klientów. Tworzą heatmapy ruchu, profilują zachowania zakupowe, mierzą czas spędzany przy półkach. W USA i Europie firmy jak RetailNext, Euclid Analytics zbudowały miliardowe biznesy na tym danych.</li>
+      <li><strong>Hotele i lotniska</strong> — systemy takie jak Wayport, Aruba Networks zbierają probe requests gości. Na lotniskach w jednym miejscu może być set access pointów nasłuchujących tysięcy pasażerów dziennie.</li>
+      <li><strong>Służby specjalne</strong> — policyjne i rządowe systemy monitoringu wykorzystują probe requests do identyfikacji osób na protestach, w miejscach publicznych, w pobliżu obiektów wrażliwych. W Polsce ABW i Policja mają dostęp do takich systemów.</li>
+      <li><strong>Hakerzy i scammerzy</strong> — w publicznych sieciach każdy może przechwycić probe requests. Z odpowiednim sprzętem za 30 dolarów można zbierać MACi i SSID tysięcy osób dziennie.</li>
+    </ul>
+
+    <p>Z protokołem SS7 (telefoniczny odpowiednik) łączy się to w kompletny system śledzenia. MAC z WiFi identyfikuje urządzenie. IMEI z sieci komórkowej identyfikuje osobę. SS7 lokalizuje gdzie ta osoba jest fizycznie. Triple threat prywatności — i żaden VPN tego nie zatrzyma.</p>
+
+    <h2 id="jak-sie-chronic">Jak się <span class="accent">chronić przed WiFi tracking</span></h2>
+
+    <p>Trzy podejścia, od najsłabszego do najskuteczniejszego:</p>
+
+    <ul>
+      <li><strong>Randomizacja MAC w systemie</strong> — iOS od wersji 8 i Android od wersji 10 oferują losowy MAC przy probe requests. Problem: randomization jest niespójny (czasem działa, czasem nie), niektóre aplikacje wymagają stałego MAC (i użytkownik wyłącza randomization), i SSID nadal są wysyłane w plain text.</li>
+      <li><strong>Tryb samolotowy</strong> — wyłącza WiFi całkowicie, więc probe requests nie są wysyłane. Ale traci się łączność — nie praktyczne na co dzień.</li>
+      <li><strong>Sprzętowa zmiana MAC</strong> — Mudi Ghost generuje nowy, losowy MAC przy każdym uruchomieniu. Dla każdej sieci zewnętrznej jesteś nieznanym urządzeniem. Nawet jeśli ktoś zbiera probe requests — nie może ich powiązać z Tobą między sesjami.</li>
+    </ul>
+
+    <p>Mudi Ghost realizuje to automatycznie: przy starcie losuje zupełnie nowy WAN MAC. Żadna sieć nie zobaczy tego samego identyfikatora dwa razy. Ciągłość śledzenia zostaje zerwana.</p>
+
+    <h2 id="mudi-ghost-mac-spoofing">Mudi Ghost — <span class="accent">sprzętowa ochrona przed WiFi tracking</span></h2>
+
+    <p>Mudi Ghost to router który rozwiązuje problem na poziomie hardware — nie appki czy ustawień systemowych:</p>
+
+    <ul>
+      <li><strong>Randomizacja MAC WAN przy każdym starcie</strong> — dla każdej hotelowej, lotniskowej, kafejkowej sieci jesteś nowym, nierozpoznanym urządzeniem. Zhakowana baza danych z wczoraj nie pasuje do dzisiejszego MAC.</li>
+      <li><strong>Zmiana BSSID routera</strong> — sam router emituje losowy identyfikator sieci. Dla systemów mapujących WiFi to obce urządzenie, nieznane w ich bazach.</li>
+      <li><strong>VPN kill switch</strong> — jeśli połączenie VPN zostanie zerwane, cały ruch zostaje zablokowany. Żaden pakiet nie wydostanie się bez szyfrowania.</li>
+    </ul>
+
+    <p>WireGuard VPN chroni warstwę IP. Zmiana MAC chroni warstwę WiFi. Zmiana IMEI chroni warstwę komórkową. Razem tworzą kompletny system ochrony — żaden pojedynczy wektor nie pozwala na śledzenie.</p>
+
+    <div class="post-cta">
+      <h3>Chroń się przed WiFi tracking — teraz</h3>
+      <p>Mudi Ghost to jedyne rozwiązanie na rynku które zmienia MAC przy każdym starcie.<br>Sprzętowo. Automatycznie. Bez konfiguracji.</p>
+      <a href="/cennik.html" class="btn">Zobacz Cennik</a>
+    </div>
+
+    <h2 id="podsumowanie">Podsumowanie — <span class="accent">nie daj się śledzić przez WiFi</span></h2>
+
+    <p>Twojego telefonu nie da się wyłączyć z dnia na dzień. Ale da się zrozumieć jak działa i jakie dane rozgłasza. WiFi probe requests to luka w prywatności, którą można załatać:</p>
+
+    <ul>
+      <li>Włącz randomizację MAC w telefonie (iOS/Android) — osłabi śledzenie, ale nie wyeliminuje</li>
+      <li>Używaj Mudi Ghost — sprzętowa zmiana MAC przy każdym starcie daje kompletną ochronę</li>
+      <li>Pamiętaj: SSID listy w probe requests to jak odcisk palców życiowych — nawet bez MAC są wartościowe dla analityków</li>
+    </ul>
+
+    <p>Mudi Ghost eliminuje problem u źródła — zmieniając hardware identity przy każdym uruchomieniu. Dla służb, brokerów danych i panopticonu — znikasz.</p>
+
+    <div class="related-section">
+      <h3>Powiązane artykuły</h3>
+      <div class="related-grid">
+        <a href="/blog/jak-policja-namierza-telefon.html" class="related-card">
+          <h4>Jak policja namierza Twój telefon</h4>
+          <p>IMSI catchers, Stingray, triangulacja</p>
+        </a>
+        <a href="/blog/vpn-vs-proxy-vs-tor.html" class="related-card">
+          <h4>VPN vs Proxy vs Tor</h4>
+          <p>Co faktycznie chroni Twoją prywatność</p>
+        </a>
+        <a href="/blog/co-to-jest-imei-anonimowosc.html" class="related-card">
+          <h4>Co to jest IMEI</h4>
+          <p>Twój cyfrowy odcisk palca w sieci</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="post-tags">
+      <span class="tag">WiFi probe requests</span>
+      <span class="tag">śledzenie WiFi</span>
+      <span class="tag">MAC address spoofing</span>
+      <span class="tag">ochrona prywatności</span>
+      <span class="tag">Mudi Ghost</span>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <p><strong>Mudi Ghost</strong> — Advanced Privacy Firmware</p>
+  <p><a href="/polityka-prywatnosci.html">Polityka Prywatności</a> · <a href="/kontakt.html">Kontakt</a></p>
+  <p style="margin-top: 12px; opacity: 0.6;">© 2026 Mudi Ghost. Wszelkie prawa zastrzeżone. Produkt przeznaczony wyłącznie do legalnego użytku.</p>
+</footer>
+
+</body>
+</html>
