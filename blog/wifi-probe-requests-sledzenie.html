@@ -180,6 +180,9 @@
       color: var(--text);
       margin-bottom: 14px;
     }
+    .post-body a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+    .post-body a:hover { opacity: 0.75; }
+
     .post-body ol li::before {
       content: counter(ol-counter, decimal-leading-zero);
       counter-increment: ol-counter;
@@ -439,24 +442,6 @@
 
     <p>Mudi Ghost eliminuje problem u źródła — zmieniając hardware identity przy każdym uruchomieniu. Dla służb, brokerów danych i panopticonu — znikasz. <a href="/blog/vpn-vs-proxy-vs-tor.html">Dowiedz się więcej o ochronie prywatności w sieci</a>.</p>
 
-    <div class="related-section">
-      <h3>Powiązane artykuły</h3>
-      <div class="related-grid">
-        <a href="/blog/jak-policja-namierza-telefon.html" class="related-card">
-          <h4>Jak policja namierza Twój telefon</h4>
-          <p>IMSI catchers, Stingray, triangulacja</p>
-        </a>
-        <a href="/blog/vpn-vs-proxy-vs-tor.html" class="related-card">
-          <h4>VPN vs Proxy vs Tor</h4>
-          <p>Co faktycznie chroni Twoją prywatność</p>
-        </a>
-        <a href="/blog/co-to-jest-imei-anonimowosc.html" class="related-card">
-          <h4>Co to jest IMEI</h4>
-          <p>Twój cyfrowy odcisk palca w sieci</p>
-        </a>
-      </div>
-    </div>
-
     <div class="post-tags">
       <span class="tag">WiFi probe requests</span>
       <span class="tag">śledzenie WiFi</span>
@@ -464,8 +449,29 @@
       <span class="tag">ochrona prywatności</span>
       <span class="tag">Mudi Ghost</span>
     </div>
+
   </div>
-</div>
+</article>
+
+<section class="related-section">
+  <div style="max-width: var(--content-w); margin: 0 auto; padding: 0 40px;">
+    <h3 style="font-family: var(--font-mono); font-size: 11px; color: var(--cyan); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0;">// Powiązane artykuły</h3>
+    <div class="related-grid">
+      <a href="/blog/jak-policja-namierza-telefon.html" class="related-card">
+        <p class="rc-date">7 maja 2026</p>
+        <h4>Jak policja namierza Twój telefon — IMSI catchers, Stingray, triangulacja</h4>
+      </a>
+      <a href="/blog/vpn-vs-proxy-vs-tor.html" class="related-card">
+        <p class="rc-date">3 kwietnia 2026</p>
+        <h4>VPN vs Proxy vs Tor — co faktycznie chroni Twoją prywatność?</h4>
+      </a>
+      <a href="/blog/co-to-jest-imei-anonimowosc.html" class="related-card">
+        <p class="rc-date">26 marca 2026</p>
+        <h4>Co to jest IMEI — Twój cyfrowy odcisk palca w sieci</h4>
+      </a>
+    </div>
+  </div>
+</section>
 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
