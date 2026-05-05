@@ -110,10 +110,11 @@
     .post-meta::before { content: '// '; color: var(--cyan); }
 
     .post-intro {
-      font-size: 20px;
+      font-size: 17px;
+      line-height: 1.8;
       color: var(--text);
-      line-height: 1.7;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
+      padding: 0;
       font-weight: 400;
     }
     .post-intro strong { color: var(--white); }
@@ -189,6 +190,29 @@
       margin-right: 8px;
       padding-top: 4px;
     }
+
+    .post-toc {
+      background: var(--dark2);
+      border: 1px solid var(--border);
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+    .post-toc h4 {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .post-toc h4::before { content: '// '; color: var(--cyan); }
+    .post-toc ol { counter-reset: toc-counter; list-style: none; padding: 0; margin: 0; }
+    .post-toc ol li { counter-increment: toc-counter; position: relative; padding: 8px 0 8px 40px; border-bottom: 1px solid var(--border); }
+    .post-toc ol li:last-child { border-bottom: none; }
+    .post-toc ol li a { color: var(--text); text-decoration: none; font-size: 15px; display: block; }
+    .post-toc ol li a::before { content: counter(toc-counter, decimal-leading-zero); color: var(--cyan); font-family: var(--font-mono); font-size: 12px; position: absolute; left: 0; top: 10px; }
+    .post-toc ol li a:hover { color: var(--cyan); }
 
     .post-highlight {
       background: var(--dark2);
@@ -323,6 +347,18 @@
   <div class="post-intro">
     Siedzisz w kawiarni. Telefon leży na stole. Nawet nie dotykasz ekranu — a on non-stop krzyczy do otoczenia: <strong>"JESTEM TUTAJ, TAM I WSZĘDZIE"</strong>. To <strong>śledzenie przez WiFi</strong> — i wiedzą o Tobie więcej niż myślisz.
   </div>
+
+  <nav class="post-toc" aria-label="Spis treści">
+    <h4>Spis Treści</h4>
+    <ol>
+      <li><a href="#co-to-są-probe-requests">Czym jest śledzenie przez WiFi i dlaczego telefon je wysyła</a></li>
+      <li><a href="#co-zawierają-probe-requests">Co zawiera probe request</a></li>
+      <li><a href="#kto-wykorzystuje-probe-requests">Kto wykorzystuje probe requests do śledzenia</a></li>
+      <li><a href="#jak-sie-chronic">Jak chronić się przed WiFi tracking</a></li>
+      <li><a href="#mudi-ghost-mac-spoofing">Mudi Ghost — sprzętowa ochrona przed WiFi tracking</a></li>
+      <li><a href="#podsumowanie">Podsumowanie — nie daj się śledzić</a></li>
+    </ol>
+  </nav>
 
   <div class="post-body">
     <h2 id="co-to-są-probe-requests">Czym jest <span class="accent">śledzenie przez WiFi</span> i dlaczego Twój telefon je wysyła</h2>
