@@ -9,8 +9,8 @@
   <meta name="robots" content="index, follow">
   <meta name="author" content="Mudi Ghost">
   <link rel="canonical" href="https://mudighost.com/blog/wifi-probe-requests-sledzenie.html">
-  <meta property="og:title" content="WiFi Probe Requests — Jak Twój Telefon Cię Śledzi | Mudi Ghost">
-  <meta property="og:description" content="Twój telefon non-stop wysyła WiFi probe requests — zapytania które ujawniają Twój MAC i listę sieci. Dowiedz się jak to działa i jak się chronić.">
+  <meta property="og:title" content="WiFi Probe Requests — Jak Telefon Cię Śledzi | Mudi Ghost">
+  <meta property="og:description" content="Twój telefon non-stop wysyła zapytania WiFi ujawniające MAC i listę sieci. Dowiedz się jak to działa i jak się chronić.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://mudighost.com/blog/wifi-probe-requests-sledzenie.html">
   <meta property="og:locale" content="pl_PL">
@@ -21,15 +21,15 @@
   <meta property="article:tag" content="MAC address spoofing">
   <meta property="article:tag" content="ochrona prywatności">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="WiFi Probe Requests — Jak Twój Telefon Cię Śledzi">
-  <meta name="twitter:description" content="Twój telefon non-stop wysyła WiFi probe requests. Dowiedz się jak i jak się chronić.">
+  <meta name="twitter:title" content="WiFi Probe Requests — Jak Telefon Cię Śledzi">
+  <meta name="twitter:description" content="Twój telefon non-stop wysyła zapytania WiFi ujawniające MAC i listę sieci. Dowiedz się jak to działa i jak się chronić.">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "WiFi Probe Requests — Jak Twój Telefon Cię Śledzi",
-    "description": "Twój telefon non-stop wysyła WiFi probe requests — zapytania które ujawniają Twój MAC i listę sieci. Dowiedz się jak to działa i jak się chronić.",
+    "headline": "WiFi Probe Requests — Jak Telefon Cię Śledzi",
+    "description": "Twój telefon non-stop wysyła zapytania WiFi ujawniające MAC i listę sieci. Dowiedz się jak to działa i jak się chronić.",
     "datePublished": "2026-05-05",
     "dateModified": "2026-05-05",
     "author": { "@type": "Organization", "name": "Mudi Ghost" },
@@ -44,7 +44,7 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Strona Główna", "item": "https://mudighost.com/" },
       { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mudighost.com/blog/" },
-      { "@type": "ListItem", "position": 3, "name": "WiFi Probe Requests — Jak Twój Telefon Cię Śledzi", "item": "https://mudighost.com/blog/wifi-probe-requests-sledzenie.html" }
+      { "@type": "ListItem", "position": 3, "name": "WiFi Probe Requests — Jak Telefon Cię Śledzi", "item": "https://mudighost.com/blog/wifi-probe-requests-sledzenie.html" }
     ]
   }
   </script>
@@ -56,90 +56,6 @@
   <link rel="stylesheet" href="/style.css">
 
   <style>
-    :root {
-      --bg: #050a14;
-      --bg-secondary: #0a1628;
-      --text: #e0e6ed;
-      --muted: #6b7c93;
-      --border: #1a2744;
-      --cyan: #00D4FF;
-      --accent: #00D4FF;
-      --dark: #050a14;
-      --white: #ffffff;
-      --font-sans: 'Source Sans 3', sans-serif;
-      --font-mono: 'Share Tech Mono', monospace;
-      --font-heading: 'Rajdhani', sans-serif;
-      --content-w: 760px;
-      --page-w: 1200px;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: var(--font-sans);
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-
-    a { color: var(--cyan); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .nav-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      background: rgba(5, 10, 20, 0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 40px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-logo {
-      font-family: var(--font-mono);
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--white);
-      text-decoration: none;
-      letter-spacing: 2px;
-    }
-
-    .nav-logo:hover { text-decoration: none; }
-
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--cyan); text-decoration: none; }
-
-    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-    .nav-toggle span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--muted);
-      margin: 5px 0;
-      transition: all 0.3s;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg); padding: 20px 40px; border-bottom: 1px solid var(--border); }
-      .nav-links.active { display: flex; }
-      .nav-toggle { display: block; }
-    }
-
     .breadcrumb {
       max-width: var(--content-w);
       margin: 0 auto;
@@ -150,6 +66,7 @@
       display: flex;
       gap: 8px;
       align-items: center;
+      flex-wrap: wrap;
       position: relative;
       z-index: 1;
     }
@@ -157,42 +74,72 @@
     .breadcrumb a:hover { color: var(--cyan); }
     .breadcrumb span { color: var(--border); }
 
-    article { max-width: var(--content-w); margin: 0 auto; padding: 60px 40px 80px; position: relative; z-index: 1; }
-    article h1 {
-      font-family: var(--font-heading);
-      font-size: clamp(32px, 5vw, 48px);
+    .post-wrap {
+      max-width: var(--content-w);
+      margin: 0 auto;
+      padding: 48px 40px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .post-wrap h1 {
+      font-family: var(--font-head);
+      font-size: 36px;
       font-weight: 700;
       color: var(--white);
-      margin-bottom: 24px;
-      line-height: 1.2;
+      letter-spacing: 1px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      text-transform: uppercase;
     }
+    .post-wrap h1 .accent { color: var(--cyan); }
 
     .post-meta {
       font-family: var(--font-mono);
       font-size: 12px;
       color: var(--muted);
-      margin-bottom: 40px;
+      margin-bottom: 32px;
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
     }
+    .post-meta::before { content: '// '; color: var(--cyan); }
 
-    .post-body { font-size: 17px; line-height: 1.7; }
+    .post-intro {
+      font-size: 20px;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+    .post-intro strong { color: var(--white); }
+
+    .post-body { font-size: 17px; line-height: 1.75; }
     .post-body h2 {
-      font-family: var(--font-heading);
-      font-size: 28px;
+      font-family: var(--font-head);
+      font-size: 26px;
       font-weight: 700;
       color: var(--white);
       margin: 48px 0 20px;
-      padding-top: 24px;
+      padding-top: 32px;
       border-top: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
     .post-body h2:first-of-type { margin-top: 0; }
     .post-body h2 .accent { color: var(--cyan); }
 
+    .post-body h3 {
+      font-family: var(--font-head);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--cyan);
+      margin: 32px 0 16px;
+      text-transform: uppercase;
+    }
+
     .post-body p { margin-bottom: 20px; color: var(--text); }
     .post-body strong { color: var(--white); font-weight: 600; }
-    .post-body .accent { color: var(--cyan); }
 
     .post-body ul, .post-body ol {
       margin: 20px 0;
@@ -205,7 +152,7 @@
       font-size: 16px;
       line-height: 1.65;
       color: var(--text);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
     .post-body ul li::before {
       content: '›';
@@ -226,7 +173,7 @@
       font-size: 16px;
       line-height: 1.65;
       color: var(--text);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
     .post-body ol li::before {
       content: counter(ol-counter, decimal-leading-zero);
@@ -236,30 +183,42 @@
       font-size: 12px;
       flex-shrink: 0;
       margin-right: 8px;
-      padding-top: 3px;
+      padding-top: 4px;
     }
 
-    .post-body .lead {
-      font-size: 20px;
-      color: var(--white);
-      line-height: 1.6;
-      margin-bottom: 32px;
-      font-weight: 400;
+    .post-highlight {
+      background: var(--dark2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--cyan);
+      padding: 20px 24px;
+      margin: 28px 0;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .post-warn {
+      background: rgba(255, 80, 80, 0.08);
+      border: 1px solid rgba(255, 80, 80, 0.3);
+      border-left: 3px solid #ff5050;
+      padding: 20px 24px;
+      margin: 28px 0;
+      font-size: 15px;
+      color: var(--text);
     }
 
     .post-cta {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border);
+      background: var(--dark2);
+      border: 1px solid var(--cyan);
       padding: 32px;
       margin: 48px 0;
       text-align: center;
-      border-radius: 4px;
     }
     .post-cta h3 {
-      font-family: var(--font-heading);
+      font-family: var(--font-head);
       font-size: 22px;
       color: var(--white);
       margin-bottom: 12px;
+      text-transform: uppercase;
     }
     .post-cta p { color: var(--muted); margin-bottom: 20px; font-size: 15px; }
     .post-cta .btn {
@@ -277,89 +236,91 @@
       cursor: pointer;
       transition: all 0.2s;
     }
-    .post-cta .btn:hover { background: var(--white); text-decoration: none; box-shadow: 0 0 20px rgba(0,242,255,0.4); }
+    .post-cta .btn:hover { background: var(--white); text-decoration: none; box-shadow: 0 0 20px var(--cyan-glow); }
 
-    .post-tags { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 24px; border-top: 1px solid var(--border); }
-    .tag { font-family: var(--font-mono); font-size: 11px; padding: 4px 12px; border: 1px solid var(--border); color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+    .post-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 32px;
+      margin-top: 48px;
+      border-top: 1px solid var(--border);
+    }
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
     .related-section { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
-    .related-section h3 { font-family: var(--font-heading); font-size: 20px; color: var(--white); margin-bottom: 20px; }
-    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-    .related-card { background: var(--bg-secondary); border: 1px solid var(--border); padding: 20px; text-decoration: none; transition: all 0.2s; }
+    .related-section h3 {
+      font-family: var(--font-head);
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 900px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
+    .related-card { background: var(--dark2); border: 1px solid var(--border); padding: 20px; text-decoration: none; transition: all 0.2s; display: block; }
     .related-card:hover { border-color: var(--cyan); text-decoration: none; }
-    .related-card h4 { font-family: var(--font-heading); font-size: 15px; color: var(--white); margin-bottom: 8px; }
+    .related-card h4 { font-family: var(--font-head); font-size: 15px; color: var(--white); margin-bottom: 8px; text-transform: uppercase; }
     .related-card p { font-size: 13px; color: var(--muted); }
 
-    footer {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border);
-      padding: 40px;
-      text-align: center;
-      margin-top: 80px;
-    }
-    footer p { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
-    footer a { color: var(--muted); }
-    footer a:hover { color: var(--cyan); }
-
     @media (max-width: 768px) {
-      article { padding: 40px 20px 60px; }
-      .post-body h2 { font-size: 24px; }
+      .post-wrap { padding: 40px 24px 60px; }
+      .post-wrap h1 { font-size: 28px; }
+      .post-body h2 { font-size: 22px; }
+      .breadcrumb { padding: 16px 24px 0; }
+      .related-grid { grid-template-columns: 1fr; }
     }
   </style>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var navToggle = document.getElementById('navToggle');
-      var navLinks = document.querySelector('.nav-links');
-      if (navToggle && navLinks) {
-        navToggle.addEventListener('click', function() {
-          navLinks.classList.toggle('active');
-          var expanded = navToggle.getAttribute('aria-expanded') === 'true';
-          navToggle.setAttribute('aria-expanded', !expanded);
-        });
-      }
-    });
-  </script>
 </head>
 <body>
-
-<header class="nav-header">
-  <a href="/" class="nav-logo">MUDI GHOST</a>
-  <nav>
-    <ul class="nav-links">
-      <li><a href="/">Strona Główna</a></li>
-      <li><a href="/#funkcje">Funkcje</a></li>
-      <li><a href="/o-nas.html">O Nas</a></li>
-      <li><a href="/cennik.html">Cennik</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/kontakt.html">Kontakt</a></li>
-    </ul>
-  </nav>
+<header class="site-header">
+  <a href="/" class="logo">MUDI <span class="accent">GHOST</span></a>
   <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
+  <nav class="site-nav" id="siteNav" role="navigation" aria-label="Główna nawigacja">
+    <a href="/">Strona Główna</a>
+    <a href="/#funkcje">Funkcje</a>
+    <a href="/o-nas.html">O Nas</a>
+    <a href="/cennik.html">Cennik</a>
+    <a href="/blog/">Blog</a>
+    <a href="/kontakt.html">Kontakt</a>
+  </nav>
 </header>
 
-<div class="breadcrumb">
+<nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="/">Strona Główna</a>
   <span>›</span>
   <a href="/blog/">Blog</a>
   <span>›</span>
-  <span>WiFi Probe Requests — Jak Twój Telefon Cię Śledzi</span>
-</div>
+  <span>WiFi Probe Requests — Jak Telefon Cię Śledzi</span>
+</nav>
 
-<article itemscope itemtype="https://schema.org/Article">
-  <header>
-    <h1 itemprop="headline">WiFi Probe Requests — Jak Twój Telefon Cię Śledzi (I Co Zrobić)</h1>
-    <div class="post-meta">
-      <time datetime="2026-05-05">// 5 maja 2026</time>
-      <span>// 8 min czytania</span>
-    </div>
-  </header>
+<div class="post-wrap">
+  <p class="section-label">Blog — Prywatność w Sieci</p>
 
-  <div class="post-body" itemprop="articleBody">
-    <p class="lead">Siedzisz w kawiarni. Telefon leży na stole. Nawet nie dotykasz ekranu — a on non-stop krzyczy do otoczenia: "JESTEM TUTAJ, TAM I WSZĘDZIE". Te krzyki to <strong>WiFi probe requests</strong> — i wiedzą o Tobie więcej niż myślisz.</p>
+  <h1><span class="accent">WiFi Probe Requests</span> — jak telefon cię śledzi</h1>
 
+  <div class="post-meta">
+    <time datetime="2026-05-05">5 maja 2026</time>
+    <span>// 8 min czytania</span>
+  </div>
+
+  <div class="post-intro">
+    Siedzisz w kawiarni. Telefon leży na stole. Nawet nie dotykasz ekranu — a on non-stop krzyczy do otoczenia: <strong>"JESTEM TUTAJ, TAM I WSZĘDZIE"</strong>. Te krzyki to <strong>WiFi probe requests</strong> — i wiedzą o Tobie więcej niż myślisz.
+  </div>
+
+  <div class="post-body">
     <h2 id="co-to-są-probe-requests">Czym są <span class="accent">probe requests</span> i dlaczego Twój telefon je wysyła</h2>
 
     <p>Za każdym razem gdy Twój smartphone łączy się z WiFi, dzieje się coś mechanicznego: urządzenie rozgląda się za znanymi sieciami. Robi to przez <strong>probe requests</strong> — specjalne pakiety wysyłane w eter, które pytają "czy jest tu sieć X?", "czy jest tu sieć Y?". Te zapytania idą w świat otwartym tekstem. Każdy może je przechwycić.</p>
@@ -375,7 +336,9 @@
       <li><strong>Lista SSID</strong> — nazwy wszystkich sieci do których telefon był kiedykolwiek podłączony. Jeśli Twój telefon łączył się z "MojaSiećDomowa", "PizzaExpress", "HotelMarriott", "AeroflotFree" — wszystkie te nazwy są w probe request.</li>
     </ul>
 
-    <p>Badania przeprowadzone przez University of Hamburg wykazały, że <strong>23.2% probe requests zawiera SSID poprzednio używanych sieci</strong>. Nie jeden, nie dwa — czasem kilkanaście czy kilkadziesiąt nazw. Z nich można wyczytać: gdzie mieszkasz, gdzie pracujesz, gdzie podróżujesz, gdzie jesz, z kim latasz.</p>
+    <div class="post-highlight">
+      Badania przeprowadzone przez University of Hamburg wykazały, że <strong>23.2% probe requests zawiera SSID poprzednio używanych sieci</strong>. Nie jeden, nie dwa — czasem kilkanaście czy kilkadziesiąt nazw. Z nich można wyczytać: gdzie mieszkasz, gdzie pracujesz, gdzie podróżujesz, gdzie jesz, z kim latasz.
+    </div>
 
     <h2 id="kto-wykorzystuje-probe-requests">Kto wykorzystuje <span class="accent">probe requests</span> do śledzenia</h2>
 
@@ -388,7 +351,9 @@
       <li><strong>Hakerzy i scammerzy</strong> — w publicznych sieciach każdy może przechwycić probe requests. Z odpowiednim sprzętem za 30 dolarów można zbierać MACi i SSID tysięcy osób dziennie.</li>
     </ul>
 
-    <p>Z protokołem SS7 (telefoniczny odpowiednik) łączy się to w kompletny system śledzenia. MAC z WiFi identyfikuje urządzenie. IMEI z sieci komórkowej identyfikuje osobę. SS7 lokalizuje gdzie ta osoba jest fizycznie. Triple threat prywatności — i żaden VPN tego nie zatrzyma.</p>
+    <div class="post-warn">
+      Z protokołem SS7 (telefoniczny odpowiednik) łączy się to w kompletny system śledzenia. MAC z WiFi identyfikuje urządzenie. IMEI z sieci komórkowej identyfikuje osobę. SS7 lokalizuje gdzie ta osoba jest fizycznie. Triple threat prywatności — i żaden VPN tego nie zatrzyma.
+    </div>
 
     <h2 id="jak-sie-chronic">Jak się <span class="accent">chronić przed WiFi tracking</span></h2>
 
@@ -397,7 +362,7 @@
     <ul>
       <li><strong>Randomizacja MAC w systemie</strong> — iOS od wersji 8 i Android od wersji 10 oferują losowy MAC przy probe requests. Problem: randomization jest niespójny (czasem działa, czasem nie), niektóre aplikacje wymagają stałego MAC (i użytkownik wyłącza randomization), i SSID nadal są wysyłane w plain text.</li>
       <li><strong>Tryb samolotowy</strong> — wyłącza WiFi całkowicie, więc probe requests nie są wysyłane. Ale traci się łączność — nie praktyczne na co dzień.</li>
-      <li><strong>Sprzętowa zmiana MAC</strong> — Mudi Ghost generuje nowy, losowy MAC przy każdym uruchomieniu. Dla każdej sieci zewnętrznej jesteś nieznanym urządzeniem. Nawet jeśli ktoś zbiera probe requests — nie może ich powiązać z Tobą między sesjami.</li>
+      <li><strong>Sprzętowa zmiana MAC</strong> — <strong>Mudi Ghost</strong> generuje nowy, losowy MAC przy każdym uruchomieniu. Dla każdej sieci zewnętrznej jesteś nieznanym urządzeniem. Nawet jeśli ktoś zbiera probe requests — nie może ich powiązać z Tobą między sesjami.</li>
     </ul>
 
     <p>Mudi Ghost realizuje to automatycznie: przy starcie losuje zupełnie nowy WAN MAC. Żadna sieć nie zobaczy tego samego identyfikatora dwa razy. Ciągłość śledzenia zostaje zerwana.</p>
@@ -458,13 +423,34 @@
       <span class="tag">Mudi Ghost</span>
     </div>
   </div>
-</article>
+</div>
 
-<footer>
-  <p><strong>Mudi Ghost</strong> — Advanced Privacy Firmware</p>
-  <p><a href="/polityka-prywatnosci.html">Polityka Prywatności</a> · <a href="/kontakt.html">Kontakt</a></p>
-  <p style="margin-top: 12px; opacity: 0.6;">© 2026 Mudi Ghost. Wszelkie prawa zastrzeżone. Produkt przeznaczony wyłącznie do legalnego użytku.</p>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">MUDI <span class="accent">GHOST</span></div>
+      <div class="footer-tagline">Advanced Privacy Firmware — Hardened Security Edition</div>
+      <div class="footer-email">mudi.ghost&#64;proton.me</div>
+    </div>
+    <nav class="footer-links" aria-label="Linki w stopce">
+      <a href="/">Strona Główna</a>
+      <a href="/cennik.html">Cennik</a>
+      <a href="/o-nas.html">O Nas</a>
+      <a href="/blog/">Blog</a>
+      <a href="/kontakt.html">Kontakt</a>
+      <a href="/polityka-prywatnosci.html">Polityka Prywatności</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 <strong><span class="accent">Mudi Ghost</span></strong>. Wszelkie prawa zastrzeżone.</span>
+    <span>Produkt przeznaczony wyłącznie do legalnego użytku.</span>
+  </div>
 </footer>
-
+<script>
+const path=window.location.pathname;document.querySelectorAll('.site-nav a').forEach(a=>{if(a.getAttribute('href')===path||a.getAttribute('href')===path+'/')a.classList.add('active')});
+const toggle=document.getElementById('navToggle'),nav=document.getElementById('siteNav');
+toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.classList.toggle('open',open);toggle.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':''});
+nav.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{nav.classList.remove('open');toggle.classList.remove('open');document.body.style.overflow=''})});
+</script>
 </body>
 </html>
