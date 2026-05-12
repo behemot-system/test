@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /cdn-cgi/
 
-Sitemap: https://mudighost.com/sitemap.xml
+Sitemap: https://pliki-ecu.poznan.pl/sitemap.xml
