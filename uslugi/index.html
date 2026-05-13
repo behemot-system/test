@@ -24,6 +24,10 @@ h1,h2,h3,h4{font-family:var(--font-display)}
 .section-label{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
 .section-title{font-family:var(--font-display);font-size:clamp(32px,4vw,52px);font-weight:900;text-transform:uppercase;line-height:1.1;letter-spacing:-0.5px;margin-bottom:24px}
 .section-title span{color:var(--accent)}
+.step-box{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:28px 24px;text-align:left}
+.step-box .step-num{font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent);margin-bottom:12px;line-height:1}
+.step-box h3{font-family:var(--font-display);font-size:16px;font-weight:800;text-transform:uppercase;margin-bottom:10px}
+.step-box p{font-size:14px;color:var(--text-muted);line-height:1.6}
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:16px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:14px 32px;border-radius:var(--radius);border:2px solid transparent;cursor:pointer;transition:all 0.25s ease}
 .btn-primary{background:var(--accent);color:var(--white);border-color:var(--accent)}
 .btn-primary:hover{background:var(--accent-dark);border-color:var(--accent-dark);transform:translateY(-2px);box-shadow:0 12px 40px var(--accent-glow)}
@@ -44,7 +48,7 @@ nav a.active{color:var(--accent)}
 .mobile-nav a:hover{color:var(--accent)}
 .header-cta{display:flex;align-items:center;gap:8px}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
-.hamburger span{width:24px;height:2px;background:var(--white);transition:all 0.3s}
+.hamburger span{width:24px;height:2px;background:#FFFFFF;transition:all 0.3s}
 .breadcrumbs{padding:120px 0 40px;background:var(--bg-secondary)}
 .breadcrumbs ul{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text-muted)}
 .breadcrumbs a{color:var(--text-muted);transition:color 0.2s}
@@ -252,38 +256,14 @@ ZADZWOŃ TERAZ
 
 <section class="section section-alt">
 <div class="container">
-<h2 class="section-title">Jak <span>Działamy</span></h2>
+<h2 class="section-title">Nasz <span>Proces</span></h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px">
-<div style="text-align:center;padding:32px">
-<div style="font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent)">1</div>
-<h3 style="margin-bottom:8px">Kontakt</h3>
-<p style="color:var(--text-muted);font-size:14px">Zadzwoń lub napisz — opisz usterkę i podaj lokalizację. Ustalamy termin wizyty.</p>
-</div>
-<div style="text-align:center;padding:32px">
-<div style="font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent)">2</div>
-<h3 style="margin-bottom:8px">Dojeżdżamy</div>
-<p style="color:var(--text-muted);font-size:14px">Nasz mobilny serwis ECU przyjeżdża pod wskazany adres z pełnym wyposażeniem.</p>
-</div>
-<div style="text-align:center;padding:32px">
-<div style="font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent)">3</div>
-<h3 style="margin-bottom:8px">Odczytywanie</div>
-<p style="color:var(--text-muted);font-size:14px">Odczytyjemy plik ECU, archiwizujemy oryginał i diagnozujemy przed modyfikacją.</p>
-</div>
-<div style="text-align:center;padding:32px">
-<div style="font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent)">4</div>
-<h3 style="margin-bottom:8px">Modyfikacja</div>
-<p style="color:var(--text-muted);font-size:14px">Modyfikujemy plik ECU (DPF OFF, EGR OFF, Remapping) i wgrywamy z powrotem.</p>
-</div>
-<div style="text-align:center;padding:32px">
-<div style="font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent)">5</div>
-<h3 style="margin-bottom:8px">Testowanie</div>
-<p style="color:var(--text-muted);font-size:14px">Testujemy działanie pojazdu po modyfikacji — wszystko sprawdzamy dokładnie.</p>
-</div>
-<div style="text-align:center;padding:32px">
-<div style="font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent)">6</div>
-<h3 style="margin-bottom:8px">Płatność</div>
-<p style="color:var(--text-muted);font-size:14px">Płacisz przy odbiorze — gotówką, kartą lub BLIK. Przejrzysta wycena bez ukrytych kosztów.</p>
-</div>
+<div class="step-box"><div class="step-num">1</div><h3>Kontakt</h3><p>Skontaktuj się z nami telefonicznie lub mailowo — omówimy szczegóły usterki i wyznaczmy dogodny termin spotkania w Twojej lokalizacji.</p></div>
+<div class="step-box"><div class="step-num">2</div><h3>Dojazd</h3><p>Nasz zespół przyjeżdża na wskazane miejsce z kompletnym sprzętem diagnostycznym — dojeżdżamy do klienta w promieniu 50 km od Poznania.</p></div>
+<div class="step-box"><div class="step-num">3</div><h3>Diagnoza</h3><p>Podłączamy się do ECU, odczytujemy oryginalne oprogramowanie i wykonujemy pełną diagnostykę przed przystąpieniem do jakichkolwiek zmian.</p></div>
+<div class="step-box"><div class="step-num">4</div><h3>Modyfikacja</h3><p>Wprowadzamy zmiany w pliku ECU zgodnie z zamówioną usługą — DPF OFF, EGR OFF, AdBlue OFF, Lambda OFF lub remapping.</p></div>
+<div class="step-box"><div class="step-num">5</div><h3>Weryfikacja</h3><p>Po wgraniu zmodyfikowanego oprogramowania testujemy poprawność działania wszystkich układów i upewniamy się, że wszystko działa bez zarzutu.</p></div>
+<div class="step-box"><div class="step-num">6</div><h3>Rozliczenie</h3><p>Po zakończeniu usługi otrzymujesz faktura i płacisz w dogodnej formie — gotówka, karta lub BLIK.</p></div>
 </div>
 </div>
 </section>
