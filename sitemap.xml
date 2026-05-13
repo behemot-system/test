@@ -2,14 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://pliki-ecu.poznan.pl/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://pliki-ecu.poznan.pl/uslugi/</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://pliki-ecu.poznan.pl/dpf-off-poznan/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://pliki-ecu.poznan.pl/egr-off-poznan/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://pliki-ecu.poznan.pl/adblue-off-poznan/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://pliki-ecu.poznan.pl/remapping-poznan/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://pliki-ecu.poznan.pl/lambda-off-poznan/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://pliki-ecu.poznan.pl/odczyt-pliku-ecu/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pliki-ecu.poznan.pl/uslugi/dpf-off-poznan/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pliki-ecu.poznan.pl/uslugi/egr-off-poznan/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pliki-ecu.poznan.pl/uslugi/adblue-off-poznan/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pliki-ecu.poznan.pl/uslugi/lambda-off-poznan/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pliki-ecu.poznan.pl/uslugi/remapping-poznan/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pliki-ecu.poznan.pl/uslugi/odczyt-pliku-ecu/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://pliki-ecu.poznan.pl/cennik/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://pliki-ecu.poznan.pl/kontakt/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pliki-ecu.poznan.pl/pliki-ecu-poznan.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://pliki-ecu.poznan.pl/pliki-ecu-lubon.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://pliki-ecu.poznan.pl/pliki-ecu-swarzedz.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://pliki-ecu.poznan.pl/pliki-ecu-suchy-las.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
@@ -21,7 +22,7 @@
   <url><loc>https://pliki-ecu.poznan.pl/pliki-ecu-szamotuly.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://pliki-ecu.poznan.pl/pliki-ecu-srem.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://pliki-ecu.poznan.pl/pliki-ecu-oborniki.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://pliki-ecu.poznan.pl/pliki-ecu-grodzisk-wlkp.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pliki-ecu.poznan.pl/pliki-ecu-grodzisk-wielkopolski.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://pliki-ecu.poznan.pl/pliki-ecu-tarnowo-podgorne.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://pliki-ecu.poznan.pl/pliki-ecu-komorniki.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://pliki-ecu.poznan.pl/pliki-ecu-puszczykowo.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
