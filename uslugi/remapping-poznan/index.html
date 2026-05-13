@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Usługi ECU Poznań — DPF OFF, EGR OFF, AdBlue OFF, Remapping | Pliki ECU Poznań</title>
-<meta name="description" content="Usługi plików ECU w Poznaniu: DPF OFF, EGR OFF, AdBlue OFF, Lambda OFF, Remapping Stage 1-2. Mobilny serwis z dojazdem. Zadzwoń 452 555 922" />
-<link rel="canonical" href="https://pliki-ecu.poznan.pl/uslugi/" />
+<title>Remapping Poznań — Mapowanie silnika Stage 1 i Stage 2 | Pliki ECU Poznań</title>
+<meta name="description" content="Remapping Poznań ✓ Profesjonalne przetaktowanie ECU — Stage 1 i Stage 2. Więcej mocy, lepszy moment obrotowy, optymalizacja spalania. Mobilny serwis. Od 800 zł. Zadzwoń 452 555 922" />
+<link rel="canonical" href="https://pliki-ecu.poznan.pl/uslugi/remapping-poznan/" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -51,11 +51,7 @@ nav a.active{color:var(--accent)}
 .breadcrumbs a:hover{color:var(--accent)}
 .breadcrumbs span{color:var(--text-muted)}
 .hero{background:var(--bg-primary);padding:60px 0 80px}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
-.hero-badge-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-.hero h1{font-family:var(--font-display);font-size:clamp(48px,7vw,96px);font-weight:900;text-transform:uppercase;line-height:0.95;letter-spacing:-1px;margin-bottom:16px}
+.hero h1{font-family:var(--font-display);font-size:clamp(48px,7vw,80px);font-weight:900;text-transform:uppercase;line-height:0.95;letter-spacing:-1px;margin-bottom:16px}
 .hero h1 .accent{color:var(--accent)}
 .hero h1 .city{color:var(--text-muted)}
 .hero-tagline{font-family:var(--font-display);font-size:20px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:20px}
@@ -65,7 +61,7 @@ nav a.active{color:var(--accent)}
 .hero-btns{display:flex;flex-wrap:wrap;gap:12px}
 .hero-stat-num{font-family:var(--font-display);font-size:42px;font-weight:900;color:var(--accent)}
 .hero-stat-label{font-size:13px;color:var(--text-muted)}
-.service-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.hero-stats{display:grid;grid-template-columns:repeat(3,auto);gap:32px;max-width:400px}
 .service-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:28px 24px;transition:all 0.3s ease}
 .service-card:hover{border-color:var(--border-accent);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.4)}
 .service-card h3{font-family:var(--font-display);font-size:18px;font-weight:800;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px}
@@ -79,6 +75,32 @@ nav a.active{color:var(--accent)}
 .service-arrow{opacity:0;transform:translateX(-8px);transition:all 0.3s;margin-top:12px;color:var(--accent)}
 .service-card:hover .service-arrow{opacity:1;transform:translateX(0)}
 .service-icon{color:var(--accent);margin-bottom:12px}
+.info-box{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:32px;margin-bottom:24px}
+.info-box h3{font-family:var(--font-display);font-size:20px;font-weight:800;text-transform:uppercase;margin-bottom:16px}
+.info-box ul li{margin-bottom:10px;padding-left:20px;position:relative}
+.info-box ul li::before{content:'→';color:var(--accent);position:absolute;left:0}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.step-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center}
+.step-card .step-num{font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent);margin-bottom:12px}
+.step-card h3{font-family:var(--font-display);font-size:16px;font-weight:800;text-transform:uppercase;margin-bottom:8px}
+.step-card p{font-size:14px;color:var(--text-muted)}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-family:var(--font-display);font-size:16px;font-weight:700;text-transform:uppercase;margin-bottom:8px;color:var(--accent)}
+.faq-a{font-size:15px;color:var(--text-secondary)}
+.pricing-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.price-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:32px;text-align:center;transition:all 0.3s}
+.price-card:hover{border-color:var(--border-accent);transform:translateY(-4px)}
+.price-card.featured{border-color:var(--accent);background:linear-gradient(180deg,rgba(255,69,0,0.06) 0%,var(--bg-card) 100%)}
+.price-card h3{font-family:var(--font-display);font-size:18px;font-weight:800;text-transform:uppercase;margin-bottom:8px}
+.price-card .price{font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--accent);margin-bottom:16px}
+.price-card .price-note{font-size:13px;color:var(--text-muted);margin-bottom:16px}
+.price-card ul{text-align:left;margin-bottom:20px}
+.price-card li{font-size:14px;color:var(--text-secondary);padding:6px 0;border-bottom:1px solid var(--border)}
+.price-card li::before{content:'✓';color:var(--accent);margin-right:8px}
+.related-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.related-links a{font-family:var(--font-display);font-size:13px;font-weight:700;text-transform:uppercase;padding:10px 20px;background:var(--bg-card);border:1px solid var(--border);border-radius:20px;transition:all 0.2s}
+.related-links a:hover{border-color:var(--accent);color:var(--accent)}
 footer{background:var(--bg-secondary);border-top:1px solid var(--border);padding:60px 0 24px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
 .footer-brand{font-family:var(--font-display);font-size:22px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
@@ -88,7 +110,7 @@ footer{background:var(--bg-secondary);border-top:1px solid var(--border);padding
 .footer-col ul li{margin-bottom:8px}
 .footer-col a{font-size:14px;color:var(--text-secondary);transition:color 0.2s}
 .footer-col a:hover{color:var(--accent)}
-.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:gap:12px}
 .footer-copyright{font-size:13px;color:var(--text-muted)}
 .footer-legal{display:flex;gap:20px}
 .footer-legal a{font-size:13px;color:var(--text-muted);transition:color 0.2s}
@@ -97,8 +119,8 @@ footer{background:var(--bg-secondary);border-top:1px solid var(--border);padding
 @media(max-width:768px){
 .nav-desktop{display:none}
 .hamburger{display:flex}
-.hero-grid{grid-template-columns:1fr}
 .footer-grid{grid-template-columns:1fr}
+.hero-stats{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -132,17 +154,24 @@ footer{background:var(--bg-secondary);border-top:1px solid var(--border);padding
 <ul>
 <li><a href="/">Strona główna</a></li>
 <li><span>›</span></li>
-<li>Usługi</li>
+<li><a href="/uslugi/">Usługi</a></li>
+<li><span>›</span></li>
+<li>Remapping Poznań</li>
 </ul>
 </div>
 </section>
 
 <section class="hero">
 <div class="container">
-<div class="section-label">Mobilny Serwis — Dojeżdżamy do Ciebie</div>
-<h1>Usługi <span class="accent">ECU</span> <span class="city">Poznań</span></h1>
-<p class="hero-tagline">Profesjonalny serwis plików ECU z dojazdem</p>
-<p class="hero-description">Oferujemy kompleksowe usługi związane z plikami ECU — od diagnostyki po profesjonalny remapping. Pracujemy wyłącznie z oryginalnym oprogramowaniem, bez zewnętrznych boxów i chipów. Dojeżdżamy do Ciebie w promieniu 50 km od Poznania.</p>
+<div class="section-label">DPF OFF — Mobilny Serwis</div>
+<h1>Remapping <span class="accent">Poznań</span></h1>
+<p class="hero-tagline">Mapowanie silnika Stage 1 i Stage 2</p>
+<p class="hero-description">Profesjonalne przetaktowanie ECU — Stage 1 i Stage 2. Więcej mocy, lepszy moment obrotowy, optymalizacja zużycia paliwa. W przeciwieństwie do chip tuning z zewnętrznymi boxami (np. RaceChip), remapping zmienia oryginalne oprogramowanie ECU, co daje lepsze efekty i zero ryzyka wykrycia.</p>
+<div class="hero-services">
+<span class="hero-service-tag">od 500 zł</span>
+<span class="hero-service-tag">Czas: 1-2h</span>
+<span class="hero-service-tag">Gwarancja</span>
+</div>
 <div class="hero-btns">
 <a href="tel:+48452555922" class="btn btn-primary">
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -155,96 +184,19 @@ ZADZWOŃ TERAZ
 
 <section class="section">
 <div class="container">
-<h2 class="section-title">Wszystkie <span>Usługi</span></h2>
-<div class="service-cards">
-<div class="service-card">
-<div class="service-icon">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l18 18"/><path d="M10.68 4H19a2 2 0 012 2v9.32"/><path d="M5 5a2 2 0 00-2 2v10a2 2 0 002 2h14"/></svg>
+<h2 class="section-title">Co to jest <span>Remapping?</span></h2>
+<div class="info-grid">
+<div class="info-box">
+<h3>Remapping ECU — co to jest?</h3>
+<p style="color:var(--text-secondary);margin-bottom:16px">Remapping ECU, nazywany także chiptuning lub mapowanie silnika, to bezpośrednia modyfikacja oprogramowania sterującego pracą silnika. W przeciwieństwie do zewnętrznych urządzeń typu RaceChip, box czy inne "chipy" montowane na przewody czujników, remapping zmienia oryginalne oprogramowanie ECU pojazdu.</p>
+<p style="color:var(--text-secondary)">To oznacza lepsze efekty, trwałość modyfikacji i brak ryzyka wykrycia przez diagnostykę samochodową.</p>
 </div>
-<h3><a href="/uslugi/dpf-off-poznan/">DPF OFF Poznań</a></h3>
-<p>Usunięcie filtra cząstek stałych DPF (FAP) z oprogramowania ECU. Trwałe rozwiązanie problemów z zapchanym lub uszkodzonym filtrem DPF.</p>
-<ul>
-<li>Eliminacja błędów DPF z ECU</li>
-<li>Brak wymuszonej regeneracji DPF</li>
-<li>Niższe spalanie i lepsza dynamika</li>
+<div class="info-box">
+<h3>Stage 1 vs Stage 2 — różnice</h3>
+<ul style="color:var(--text-secondary)">
+<li><strong>Stage 1</strong> — optymalizacja fabrycznych parametrów ECU. +15-25% mocy, +20-30% momentu obrotowego. Dla pojazdów w dobrym stanie technicznym.</li>
+<li><strong>Stage 2</strong> — agresywniejsza modyfikacja ECU. +30-40% mocy. Wymaga dodatkowych modyfikacji mechanicznych (wydatek paliwa, wymiana turbiny).</li>
 </ul>
-<p class="price-hint">od 500 zł | Czas: 1-2h</p>
-<div class="service-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></div>
-</div>
-
-<div class="service-card">
-<div class="service-icon">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-</div>
-<h3><a href="/uslugi/egr-off-poznan/">EGR OFF Poznań</a></h3>
-<p>Dezaktywacja zaworu recyrkulacji spalin EGR w oprogramowaniu ECU. Koniec z problematyczną recyrkulacją spalin.</p>
-<ul>
-<li>Usunięcie błędów EGR z ECU</li>
-<li>Lepsza praca silnika i wyższa moc</li>
-<li>Brak zasniedziałych kolektorów</li>
-</ul>
-<p class="price-hint">od 500 zł | Czas: 1-2h</p>
-<div class="service-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></div>
-</div>
-
-<div class="service-card">
-<div class="service-icon">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-</div>
-<h3><a href="/uslugi/adblue-off-poznan/">AdBlue OFF Poznań</a></h3>
-<p>Wyłączenie systemu AdBlue/SCR z oprogramowania ECU. Trwałe rozwiązanie problemów z infrastrukturą SCR.</p>
-<ul>
-<li>Usunięcie błędów AdBlue z ECU</li>
-<li>Brak konieczności tankowania AdBlue</li>
-<li>Pełna zgodność z normami Euro 3-6</li>
-</ul>
-<p class="price-hint">od 700 zł | Czas: 2-3h</p>
-<div class="service-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></div>
-</div>
-
-<div class="service-card">
-<div class="service-icon">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-</div>
-<h3><a href="/uslugi/remapping-poznan/">Remapping Poznań</a></h3>
-<p>Profesjonalne przetaktowanie ECU — Stage 1 i Stage 2. Więcej mocy, lepszy moment obrotowy.</p>
-<ul>
-<li>Więcej koni mechanicznych (+15-25%)</li>
-<li>Lepszy moment obrotowy (+20-30%)</li>
-<li>Optymalizacja zużycia paliwa</li>
-</ul>
-<p class="price-hint">od 800 zł | Czas: 2-3h</p>
-<div class="service-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></div>
-</div>
-
-<div class="service-card">
-<div class="service-icon">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41"/><path d="M4.93 4.93l1.41 1.41"/><path d="M4.93 19.07l1.41-1.41"/><path d="M19.07 19.07l-1.41-1.41"/></svg>
-</div>
-<h3><a href="/uslugi/lambda-off-poznan/">Lambda OFF Poznań</a></h3>
-<p>Wyłączenie sond lambda z oprogramowania ECU. Eliminacja błędów sondy lambda.</p>
-<ul>
-<li>Usunięcie błędów Lambda z ECU</li>
-<li>Optymalizacja składu mieszanki paliwowej</li>
-<li>Lepsza responsywność silnika</li>
-</ul>
-<p class="price-hint">od 400 zł | Czas: 1-2h</p>
-<div class="service-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></div>
-</div>
-
-<div class="service-card">
-<div class="service-icon">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-</div>
-<h3><a href="/uslugi/odczyt-pliku-ecu/">Odczyt Pliku ECU Poznań</a></h3>
-<p>Odczytywanie oryginalnych plików ECU z pojazdu. Pełna diagnostyka i archiwizacja oryginału.</p>
-<ul>
-<li>Diagnostyka ECU i odczyt pliku</li>
-<li>Archiwizacja oryginału na dysku</li>
-<li>Możliwość przywrócenia fabrycznych ustawień</li>
-</ul>
-<p class="price-hint">od 200 zł | Czas: 30-60 min</p>
-<div class="service-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></div>
 </div>
 </div>
 </div>
@@ -252,45 +204,142 @@ ZADZWOŃ TERAZ
 
 <section class="section section-alt">
 <div class="container">
+<h2 class="section-title">Korzyści z <span>Remapping</span></h2>
+<div class="info-grid">
+<div class="info-box">
+<ul style="color:var(--text-secondary)">
+<li>✓ Więcej koni mechanicznych (+15-25%)</li>
+<li>✓ Lepszy moment obrotowy (+20-30%)</li>
+<li>✓ Optymalizacja zużycia paliwa</li>
+<li>✓ Bezpieczne dla silnika i skrzyni biegów (Stage 1)</li>
+<li>✓ Brak ryzyka wykrycia przez diagnostykę</li>
+</ul>
+</div>
+<div class="info-box">
+<h3>Remapping vs Chip Tuning</h3>
+<p style="color:var(--text-secondary)">Chip tuning (np. RaceChip, BBoost) to zewnętrzne urządzenia montowane na przewody czujników — zmieniają sygnały idące do ECU, ale nie modyfikują oryginalnego oprogramowania.</p>
+<p style="color:var(--text-secondary);margin-top:8px">Remapping to bezpośrednia zmiana oprogramowania ECU — oryginalny plik jest odczytywany, modyfikowany i wgrywany z powrotem. Efekty są trwałe i lepsze.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
 <h2 class="section-title">Jak <span>Działamy</span></h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px">
-<div style="text-align:center;padding:32px">
-<div style="font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent)">1</div>
-<h3 style="margin-bottom:8px">Kontakt</h3>
-<p style="color:var(--text-muted);font-size:14px">Zadzwoń lub napisz — opisz usterkę i podaj lokalizację. Ustalamy termin wizyty.</p>
+<div class="info-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+<div class="step-card">
+<div class="step-num">1</div>
+<h3>Kontakt</h3>
+<p>Zadzwoń i opisz problem — ustalamy termin wizyty mobilnego serwisu.</p>
 </div>
-<div style="text-align:center;padding:32px">
-<div style="font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent)">2</div>
-<h3 style="margin-bottom:8px">Dojeżdżamy</div>
-<p style="color:var(--text-muted);font-size:14px">Nasz mobilny serwis ECU przyjeżdża pod wskazany adres z pełnym wyposażeniem.</p>
+<div class="step-card">
+<div class="step-num">2</div>
+<h3>Dojeżdżamy</h3>
+<p>Przyjeżdżamy pod wskazany adres w Poznaniu i okolicach w promieniu 50 km.</p>
 </div>
-<div style="text-align:center;padding:32px">
-<div style="font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent)">3</div>
-<h3 style="margin-bottom:8px">Odczytywanie</div>
-<p style="color:var(--text-muted);font-size:14px">Odczytyjemy plik ECU, archiwizujemy oryginał i diagnozujemy przed modyfikacją.</p>
+<div class="step-card">
+<div class="step-num">3</div>
+<h3>Odczytywanie</h3>
+<p>Odczytyjemy plik ECU z Twojego diesla i archiwizujemy oryginał.</p>
 </div>
-<div style="text-align:center;padding:32px">
-<div style="font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent)">4</div>
-<h3 style="margin-bottom:8px">Modyfikacja</div>
-<p style="color:var(--text-muted);font-size:14px">Modyfikujemy plik ECU (DPF OFF, EGR OFF, Remapping) i wgrywamy z powrotem.</p>
+<div class="step-card">
+<div class="step-num">4</div>
+<h3>Modyfikacja</h3>
+<p>Modyfikujemy plik ECU — wyłączamy funkcje związane z DPF.</p>
 </div>
-<div style="text-align:center;padding:32px">
-<div style="font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent)">5</div>
-<h3 style="margin-bottom:8px">Testowanie</div>
-<p style="color:var(--text-muted);font-size:14px">Testujemy działanie pojazdu po modyfikacji — wszystko sprawdzamy dokładnie.</p>
+<div class="step-card">
+<div class="step-num">5</div>
+<h3>Wgrywanie</h3>
+<p>Wgrywamy zmodyfikowany plik z powrotem do ECU.</p>
 </div>
-<div style="text-align:center;padding:32px">
-<div style="font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent)">6</div>
-<h3 style="margin-bottom:8px">Płatność</div>
-<p style="color:var(--text-muted);font-size:14px">Płacisz przy odbiorze — gotówką, kartą lub BLIK. Przejrzysta wycena bez ukrytych kosztów.</p>
+<div class="step-card">
+<div class="step-num">6</div>
+<h3>Testowanie</h3>
+<p>Testujemy działanie pojazdu — wszystko sprawdzamy dokładnie.</p>
 </div>
+</div>
+</div>
+</section>
+
+<section class="section section-alt">
+<div class="container">
+<h2 class="section-title">Ile <span>Kosztuje</span> Remapping?</h2>
+<div class="pricing-cards">
+<div class="price-card">
+<h3>Stage 1</h3>
+<div class="price">od 800 zł</div>
+<div class="price-note">Czas: 2-3h | Gwarancja: 24 miesiące</div>
+<ul>
+<li>Odczytywanie i modyfikacja ECU</li>
+<li>+15-25% mocy</li>
+<li>+20-30% momentu obrotowego</li>
+<li>Optymalizacja spalania</li>
+<li>Archiwizacja oryginału</li>
+</ul>
+<a href="tel:+48452555922" class="btn btn-primary" style="width:100%;justify-content:center">Zadzwoń po wycenę</a>
+</div>
+<div class="price-card featured">
+<h3>Stage 2</h3>
+<div class="price">od 1200 zł</div>
+<div class="price-note">Czas: 3-4h | Gwarancja: 36 miesięcy</div>
+<ul>
+<li>Wszystko ze Stage 1</li>
+<li>+30-40% mocy</li>
+<li>Aggressive mapping</li>
+<li>Wymaga weryfikacji stanu</li>
+<li>Priorytetowa obsługa</li>
+</ul>
+<a href="tel:+48452555922" class="btn btn-primary" style="width:100%;justify-content:center">Zadzwoń po wycenę</a>
+</div>
+</div>
+<p style="text-align:center;margin-top:24px;color:var(--text-muted);font-size:14px">Dokładną wycenę podajemy po konsultacji telefonicznej — zadzwoń 452 555 922</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<h2 class="section-title">Częste <span>Pytania</span></h2>
+<div>
+<div class="faq-item">
+<div class="faq-q">Czy remapping jest bezpieczne dla silnika?</div>
+<div class="faq-a">Tak. Stage 1 to optymalizacja fabrycznych parametrów ECU przy zachowaniu pełnego bezpieczeństwa dla silnika i skrzyni biegów. Profesjonalny remapping nie skraca żywotności silnika — wręcz przeciwnie, optymalna praca może nawet zmniejszyć zużycie.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Czy można wrócić do oryginalnego oprogramowania?</div>
+<div class="faq-a">Tak! Przed każdą modyfikacją archiwizujemy oryginalny plik ECU. Jeśli zajdzie potrzeba przywrócenia ustawień fabrycznych — wgrywamy oryginalny plik z powrotem, bez żadnych konsekwencji dla pojazdu.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Czy diagnostyka wykryje remapping?</div>
+<div class="faq-a">Nie. Remapping zmienia oryginalne oprogramowanie ECU — nie ma żadnych zewnętrznych urządzeń. Profesjonalna diagnostyka nie jest w stanie odróżnić zmodyfikowanego pliku od oryginału.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Czy remapping wpływa na gwarancję producenta?</div>
+<div class="faq-a">Remapping to modyfikacja oprogramowania ECU. W przypadku nowych pojazdów na gwarancji, decyzja należy do właściciela. W wielu krajach europejskich modyfikacja ECU jest legalna i nie wpływa na prawa konsumenta.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Jak długo trwa usługa remapping?</div>
+<div class="faq-a">Cały proces trwa 2-3 godziny. Przyjeżdżamy pod wskazany adres, odczytujemy plik ECU, modyfikujemy go i wgrywamy z powrotem.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section section-alt">
+<div class="container">
+<h2 class="section-title">Powiązane <span>Usługi</span></h2>
+<p style="color:var(--text-secondary);margin-bottom:16px">Zobacz też inne nasze usługi związane z oprogramowaniem ECU:</p>
+<div class="related-links">
+<a href="/uslugi/dpf-off-poznan/">DPF OFF Poznań</a>
+<a href="/uslugi/egr-off-poznan/">EGR OFF Poznań</a>
+<a href="/uslugi/odczyt-pliku-ecu/">Odczyt Pliku ECU</a>
 </div>
 </div>
 </section>
 
 <section class="section" style="background:var(--bg-primary);text-align:center;padding:80px 0">
 <div class="container">
-<h2 class="section-title">Potrzebujesz <span>Plików ECU?</span></h2>
+<h2 class="section-title">Potrzebujesz <span>Remapping?</span></h2>
 <p style="color:var(--text-secondary);max-width:500px;margin:0 auto 32px">Zadzwoń lub napisz — odpowiadamy w ciągu kilku godzin. Mobilny serwis z dojazdem w promieniu 50 km od Poznania.</p>
 <a href="tel:+48452555922" class="btn btn-primary" style="font-size:18px;padding:18px 40px">
 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
