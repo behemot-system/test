@@ -239,13 +239,13 @@ nav a:hover { color: var(--white); background: rgba(255,255,255,0.06); }
 .process { background: var(--bg-secondary); }
 .process-header { text-align: center; margin-bottom: 48px; }
 .process-header p { font-size: 17px; color: var(--text-secondary); margin-top: 16px; }
-.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; }
-.process-step { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 28px 20px; text-align: center; position: relative; }
-.process-step::after { content: '→'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-size: 24px; color: var(--accent); }
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+.process-step { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 28px 24px; text-align: left; position: relative; }
+.process-step::after { content: '→'; position: absolute; right: -24px; top: 50%; transform: translateY(-50%); font-size: 24px; color: var(--accent); }
 .process-step:last-child::after { display: none; }
-.process-num { width: 48px; height: 48px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 20px; font-weight: 900; margin: 0 auto 16px; }
-.process-step h4 { font-family: var(--font-display); font-size: 16px; font-weight: 800; text-transform: uppercase; margin-bottom: 8px; }
-.process-step p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+.process-step .step-num { font-family: var(--font-display); font-size: 48px; font-weight: 900; color: var(--accent); margin-bottom: 12px; line-height: 1; }
+.process-step h3 { font-family: var(--font-display); font-size: 16px; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; }
+.process-step p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 .faq { background: var(--bg-secondary); }
 .faq-header { text-align: center; margin-bottom: 48px; }
 .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 1000px; margin: 0 auto; }
@@ -308,7 +308,7 @@ footer { background: #08080D; border-top: 1px solid var(--border); padding: 56px
   .about-image { display: none; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .trust-grid { grid-template-columns: 1fr 1fr; }
-  .process-grid { grid-template-columns: 1fr 1fr; }
+  .process-grid { grid-template-columns: repeat(3, 1fr); }
   .process-step::after { display: none; }
   .faq-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -317,6 +317,7 @@ footer { background: #08080D; border-top: 1px solid var(--border); padding: 56px
   .section { padding: 60px 0; }
   .services-grid { grid-template-columns: 1fr; }
   .trust-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-stats { gap: 20px; flex-wrap: wrap; }
   .cta-phone { font-size: 32px; }
   .footer-grid { grid-template-columns: 1fr; }
@@ -327,6 +328,8 @@ footer { background: #08080D; border-top: 1px solid var(--border); padding: 56px
   .hero-btns { flex-direction: column; align-items: stretch; }
   .btn { justify-content: center; }
   .footer-bottom { flex-direction: column; text-align: center; }
+  .process-grid { grid-template-columns: 1fr; }
+  .process-step { padding: 20px 16px; }
 }
 </style>
 
@@ -631,10 +634,12 @@ footer { background: #08080D; border-top: 1px solid var(--border); padding: 56px
 <p>Z nami usługa serwisu plików ECU to szybki i bezproblemowy proces. Wystarczy jeden telefon, a resztę załatwiamy na miejscu.</p>
 </div>
 <div class="process-grid">
-<div class="process-step"><div class="process-num">1</div><h4>Zadzwoń do nas</h4><p>Opisz usterkę i podaj lokalizację. Ustalamy termin wizyty mobilnego serwisu plików ECU.</p></div>
-<div class="process-step"><div class="process-num">2</div><h4>Przyjeżdżamy do Ciebie</h4><p>Nasz mobilny serwis ECU przyjeżdża pod wskazany adres z pełnym wyposażeniem diagnostycznym.</p></div>
-<div class="process-step"><div class="process-num">3</div><h4>Odczytywanie i modyfikacja</h4><p>Odczytyjemy plik ECU, modyfikujemy go (DPF OFF, EGR OFF, Remapping), testujemy działanie.</p></div>
-<div class="process-step"><div class="process-num">4</div><h4>Platność gotówką/kartą</h4><p>Płacisz przy odbiorze — gotówką, kartą lub BLIK. Przejrzysta wycena bez ukrytych kosztów.</p></div>
+<div class="process-step"><div class="step-num">1</div><h3>Kontakt</h3><p>Zadzwoń lub napisz – opisz usterkę i podaj lokalizację. Ustalamy termin wizyty mobilnego serwisu plików ECU.</p></div>
+<div class="process-step"><div class="step-num">2</div><h3>Dojeżdżamy</h3><p>Nasz mobilny serwis ECU przyjeżdża pod wskazany adres z pełnym wyposażeniem diagnostycznym.</p></div>
+<div class="process-step"><div class="step-num">3</div><h3>Odczytywanie</h3><p>Odczytyjemy plik ECU z Twojego diesla i archiwizujemy oryginał – masz gwarancję bezpieczeństwa.</p></div>
+<div class="process-step"><div class="step-num">4</div><h3>Modyfikacja</h3><p>Modyfikujemy plik ECU (DPF OFF, EGR OFF, Remapping) i wgrywamy z powrotem.</p></div>
+<div class="process-step"><div class="step-num">5</div><h3>Testowanie</h3><p>Testujemy działanie pojazdu po modyfikacji – wszystko sprawdzamy dokładnie.</p></div>
+<div class="process-step"><div class="step-num">6</div><h3>Płatność</h3><p>Płacisz przy odbiorze – gotówką, kartą lub BLIK. Przejrzysta wycena bez ukrytych kosztów.</p></div>
 </div>
 </div>
 </section>
